@@ -1,0 +1,33 @@
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:#111;background:#fafafa}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;background:#fff;border-bottom:1px solid #eee;z-index:999}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+nav .brand{display:flex;gap:10px;align-items:center}
+nav a{color:#111;text-decoration:none;margin-left:18px;font-weight:600}
+nav a:hover{opacity:.8}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid #111;text-decoration:none;color:#111;transition:.2s}
+.btn.primary{background:#111;color:#fff;border-color:#111}
+.btn:hover{transform:translateY(-1px)}
+.hero{display:flex;align-items:center;min-height:68vh;padding:60px 0;background:linear-gradient(180deg,#fff, #f3f3f3)}
+.hero .text{flex:1}
+.hero h1{font-size:48px;line-height:1.05;margin:0 0 10px}
+.hero p{font-size:18px;color:#444;margin:0 0 20px}
+.hero .card{flex:1;background:#fff;border:1px solid #eee;border-radius:16px;padding:18px}
+.grid{display:grid;gap:20px}
+.services{padding:60px 0}
+.services .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:#fff;border:1px solid #eee;border-radius:16px;padding:18px}
+.card h3{margin:0 0 8px}
+.pricelist{padding:60px 0}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:12px;border-bottom:1px solid #eee;text-align:left}
+.badge{display:inline-block;background:#111;color:#fff;border-radius:999px;padding:4px 10px;font-size:12px}
+.team,.gallery,.booking,.contact{padding:60px 0}
+.gallery .grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.gallery .ph{aspect-ratio:4/3;background:#ddd;border-radius:12px;border:1px dashed #bbb}
+footer{padding:26px 0;border-top:1px solid #eee;background:#fff;color:#555;font-size:14px}
+.kv{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:900px){.hero{flex-direction:column}.kv{grid-template-columns:1fr}}
+.opening-table td{padding:6px 10px;border-bottom:1px solid #eee}
+small.muted{color:#666}
