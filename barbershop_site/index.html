@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barbershop [Jouw Naam] – Knippen & Baard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Barbershop Logo" width="120" height="36">
+      </div>
+      <div>
+        <a href="#services">Diensten</a>
+        <a href="#prijzen">Prijzen</a>
+        <a href="#team">Team</a>
+        <a href="#booking" class="btn primary">Maak afspraak</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="container kv">
+    <div class="text">
+      <span class="badge">Barbershop [Jouw Naam]</span>
+      <h1>Strakke kapsels, scherpe lijnen</h1>
+      <p>Premium knip- en scheerbehandelingen. Boek online, loop ontspannen binnen.</p>
+      <a href="#booking" class="btn primary">Nu boeken</a>
+    </div>
+  </div>
+</section>
+<section id="services" class="services">
+  <div class="container">
+    <h2>Diensten</h2>
+    <div class="grid">
+      <div class="card"><h3>Knippen</h3></div>
+      <div class="card"><h3>Knippen + Baard</h3></div>
+      <div class="card"><h3>Baard scheren</h3></div>
+    </div>
+  </div>
+</section>
+<section id="booking" class="booking">
+  <div class="container">
+    <h2>Online afspraak maken</h2>
+    <div class="card">
+      <h3>Calendly</h3>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR-USERNAME/knippen-30" style="min-width:320px;height:630px;"></div>
+      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="container">© <span id="year"></span> Barbershop [Jouw Naam]</div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
