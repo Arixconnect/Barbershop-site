@@ -4,53 +4,48 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Master Barbershop – Arnhem</title>
-  <meta name="description" content="Master Barbershop in Arnhem – specialist in baard modelleren en VIP behandelingen.">
+  <meta name="description" content="Master Barbershop in Arnhem – specialist in baard modelleren en VIP-behandelingen.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 </head>
 <body>
 <header>
   <div class="container">
     <nav>
       <div class="brand">
-        <img src="assets/logo.svg" alt="Master Barbershop Logo" width="120" height="36">
+        <img src="assets/logo.png" class="logo" alt="Master Barbershop logo">
       </div>
       <div>
         <a href="#services">Diensten</a>
         <a href="#prijzen">Prijzen</a>
-        <a href="#booking" class="btn primary">Maak afspraak</a>
+        <a href="#gallery">Galerij</a>
+        <a href="#booking" class="btn">Maak afspraak</a>
       </div>
     </nav>
   </div>
 </header>
 
 <section class="hero">
-  <div class="container kv">
-    <div class="text">
-      <span class="badge">Master Barbershop – Arnhem</span>
-      <h1>Strakke kapsels, perfecte baarden</h1>
-      <p>Premium knip- en scheerbehandelingen met oog voor detail. Reserveer online en geniet zonder wachttijd.</p>
-      <a href="#booking" class="btn primary">Nu boeken</a>
-    </div>
-    <div class="card">
-      <h3>Ons adres</h3>
-      <p>Middachtensingel 145<br>Arnhem</p>
-    </div>
+  <div class="overlay"></div>
+  <div class="container text">
+    <span class="badge">Arnhem • Middachtensingel 145</span>
+    <h1>Strakke kapsels & perfecte baarden</h1>
+    <p>Exclusieve knip- en scheerbehandelingen in een luxe setting met pooltafel en marmeren tegels. Reserveer en ervaar kwaliteit.</p>
+    <a href="#booking" class="btn">Nu boeken</a>
   </div>
 </section>
 
 <section id="services" class="services">
   <div class="container">
-    <h2>Diensten</h2>
+    <h2>Onze Diensten</h2>
     <div class="grid">
-      <div class="card"><h3>Knippen</h3></div>
-      <div class="card"><h3>Knippen + Baard</h3></div>
-      <div class="card"><h3>Baard scheren</h3></div>
-      <div class="card"><h3>Gezichtsbehandeling</h3></div>
-      <div class="card"><h3>Touw epileren</h3></div>
-      <div class="card"><h3>Harsen (oor/neus/gezicht)</h3></div>
-      <div class="card"><h3>Haar wassen + hoofdmassage</h3></div>
-      <div class="card"><h3>VIP pakket</h3></div>
+      <div class="card"><h3>Knippen</h3><p>Moderne en klassieke coupes.</p></div>
+      <div class="card"><h3>Knippen + Baard</h3><p>Perfecte combinatiebehandeling.</p></div>
+      <div class="card"><h3>Baard modelleren</h3><p>Onze specialiteit voor de perfecte look.</p></div>
+      <div class="card"><h3>Gezichtsbehandeling</h3><p>Verzorging en ontspanning.</p></div>
+      <div class="card"><h3>Touw epileren</h3><p>Strakke contouren.</p></div>
+      <div class="card"><h3>Harsen oor/neus/gezicht</h3><p>Snel en hygiënisch.</p></div>
+      <div class="card"><h3>Wassen & hoofdmassage</h3><p>Ontspan en verwen je hoofdhuid.</p></div>
+      <div class="card"><h3>VIP Pakket</h3><p>Luxe combinatie van meerdere services.</p></div>
     </div>
   </div>
 </section>
@@ -58,55 +53,44 @@
 <section id="prijzen" class="pricelist">
   <div class="container">
     <h2>Prijslijst</h2>
-    <table class="table">
-      <thead><tr><th>Behandeling</th><th>Prijs</th></tr></thead>
-      <tbody>
-        <tr><td>Knippen</td><td>€28</td></tr>
-        <tr><td>Knippen + Baard</td><td>€40</td></tr>
-        <tr><td>Baard scheren</td><td>€18</td></tr>
-        <tr><td>Gezichtsbehandeling</td><td>€35</td></tr>
-        <tr><td>Touw epileren</td><td>€15</td></tr>
-        <tr><td>Harsen</td><td>€20</td></tr>
-        <tr><td>Haar wassen + hoofdmassage</td><td>€15</td></tr>
-        <tr><td>VIP pakket</td><td>Op aanvraag</td></tr>
-      </tbody>
+    <table>
+      <tr><th>Behandeling</th><th>Prijs</th></tr>
+      <tr><td>Knippen</td><td>€28</td></tr>
+      <tr><td>Knippen + Baard</td><td>€40</td></tr>
+      <tr><td>Baard modelleren</td><td>€25</td></tr>
+      <tr><td>Gezichtsbehandeling</td><td>€35</td></tr>
+      <tr><td>Touw epileren</td><td>€15</td></tr>
+      <tr><td>Harsen</td><td>€20</td></tr>
+      <tr><td>Wassen & hoofdmassage</td><td>€15</td></tr>
+      <tr><td>VIP Pakket</td><td>Op aanvraag</td></tr>
     </table>
+  </div>
+</section>
+
+<section id="gallery" class="gallery">
+  <div class="container">
+    <h2>Galerij</h2>
+    <div class="grid">
+      <img src="https://images.unsplash.com/photo-1573497019520-00d3c88e905f?auto=format&fit=crop&w=800&q=80" alt="Knippen">
+      <img src="https://images.unsplash.com/photo-1621609774417-223a7bc01db4?auto=format&fit=crop&w=800&q=80" alt="Barberstoel">
+      <img src="https://images.unsplash.com/photo-1591608516485-6c3a7d6f7b67?auto=format&fit=crop&w=800&q=80" alt="Baard trimmen">
+      <img src="https://images.unsplash.com/photo-1612817288484-6dfb05f3282e?auto=format&fit=crop&w=800&q=80" alt="Interieur met marmer">
+    </div>
   </div>
 </section>
 
 <section id="booking" class="booking">
   <div class="container">
-    <h2>Online afspraak maken</h2>
+    <h2>Online Afspraak Maken</h2>
     <div class="card">
-      <h3>Boeken via Setmore</h3>
-      <a class="btn primary" target="_blank" href="https://booking.setmore.com/schedule/testlink123">Klik hier om te boeken</a>
-    </div>
-  </div>
-</section>
-
-<section class="contact">
-  <div class="container">
-    <h2>Contact & Openingstijden</h2>
-    <div class="kv">
-      <div class="card">
-        <h3>Adres</h3>
-        <p>Middachtensingel 145<br>Arnhem</p>
-        <h3>Openingstijden</h3>
-        <table class="opening-table">
-          <tr><td>Ma–Vr</td><td>10:00 – 18:00</td></tr>
-          <tr><td>Za–Zo</td><td>Gesloten</td></tr>
-        </table>
-      </div>
-      <div class="card">
-        <h3>Unieke winkel</h3>
-        <p>Pooltafel en marmeren tegels voor een luxe beleving.</p>
-      </div>
+      <p>Klik op de knop hieronder om via onze Setmore-pagina een afspraak te maken.</p>
+      <a class="btn" target="_blank" href="https://booking.setmore.com/schedule/testlink123">Boek Nu</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="container">© <span id="year"></span> Master Barbershop</div>
+  <div class="container">© <span id="year"></span> Master Barbershop – Ma–Vr 10:00–18:00</div>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
