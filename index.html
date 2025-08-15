@@ -6,6 +6,7 @@
   <title>Master Barbershop – Arnhem</title>
   <meta name="description" content="Master Barbershop in Arnhem – specialist in baard modelleren en VIP-behandelingen.">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
 <header>
@@ -88,8 +89,40 @@
   </div>
 </section>
 
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Contact & Openingstijden</h2>
+    <div class="kv">
+      <div class="card">
+        <h3>Adres</h3>
+        <p>Middachtensingel 145<br>Arnhem</p>
+        <h3>Openingstijden</h3>
+        <table class="opening-table">
+          <tr><td>Maandag</td><td>12:00 – 19:00</td></tr>
+          <tr><td>Dinsdag</td><td>10:00 – 19:00</td></tr>
+          <tr><td>Woensdag</td><td>10:00 – 19:00</td></tr>
+          <tr><td>Donderdag</td><td>10:00 – 19:00</td></tr>
+          <tr><td>Vrijdag</td><td>10:00 – 19:00</td></tr>
+          <tr><td>Zaterdag</td><td>10:00 – 19:00</td></tr>
+          <tr><td>Zondag</td><td>Gesloten</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Route</h3>
+        <p><small>Vervang de kaart-embed door jouw eigen Google Maps embed.</small></p>
+        <div style="aspect-ratio:4/3;border:1px solid #ddd;border-radius:12px;overflow:hidden">
+          <iframe
+            src="https://maps.google.com/maps?q=Middachtensingel%20145%20Arnhem&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <div class="container">© <span id="year"></span> Master Barbershop – Ma–Vr 10:00–18:00</div>
+  <div class="container">© <span id="year"></span> Master Barbershop – Ma 12:00–19:00 • Di–Za 10:00–19:00 • Zo gesloten</div>
 </footer>
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
