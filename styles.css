@@ -33,8 +33,4 @@ footer{padding:26px 0;border-top:1px solid #ddd;background:#f0f0f0;color:#555;fo
 .kv{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 @media (max-width: 768px){.logo{height:32px}nav{height:auto;padding:10px 0}.nav-links{gap:14px}.kv{grid-template-columns:1fr}}
 
-/* === Diensten met iconen === */
-.services .icon{width:28px;height:28px;flex:0 0 28px}
-.services .card{display:flex;gap:14px;align-items:flex-start}
-.services .card h3{margin:0 0 6px}
-.services .card p{margin:0;color:#555}
+.services .card{padding:20px}.services .card h3{margin:0 0 6px}.services .card p{margin:0;color:#555}
