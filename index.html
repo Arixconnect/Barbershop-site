@@ -10,25 +10,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    /* Echte hero? zet 'img/hero.jpg' in /img. */
-    @media (min-width:0){ .hero { background-image: url('img/hero.jpg'), url('img/hero.png'); } }
-  </style>
 </head>
 <body>
   <header>
     <div class="container nav">
       <a href="#" class="brand" aria-label="Master Barbershop home">
-        <span class="logo">MB</span>
-        <span>Master Barbershop</span>
+        <img src="img/logo.png" alt="Master Barbershop logo" />
       </a>
-      <nav>
+      <nav class="menu">
         <a href="#diensten">Diensten</a>
         <a href="#prijzen">Prijslijst</a>
         <a href="#galerij">Galerij</a>
         <a href="#reviews">Reviews</a>
         <a href="#contact">Contact</a>
-        <a href="#afspraak">Afspraak</a>
+        <a class="cta-link" href="https://masterbarbershoparnhem.setmore.com" target="_blank" rel="noopener">Boek nu</a>
       </nav>
     </div>
   </header>
@@ -37,7 +32,12 @@
     <div class="inner container">
       <h1>Strakke kapsels & perfecte baarden</h1>
       <p>Zwart • Wit • Chroom — vakmanschap met oog voor detail.</p>
-      <a href="#afspraak" class="cta">Plan direct een afspraak</a>
+      <a href="https://masterbarbershoparnhem.setmore.com" class="cta" target="_blank" rel="noopener">Plan afspraak</a>
+      <div class="usp">
+        <span>Online plannen</span>
+        <span>Snelle bevestiging</span>
+        <span>Betalen in de shop</span>
+      </div>
     </div>
   </section>
 
@@ -51,7 +51,7 @@
           <p>Moderne en klassieke coupes, strak afgewerkt.</p>
         </div>
         <div class="card">
-          <img src="img/icon_scissors.svg" alt="" class="icon" loading="lazy">
+          <img src="img/icon_scissors.png" alt="" class="icon" loading="lazy">
           <h3>Knippen + Baard</h3>
           <p>Alles-in-één: frisse coupe en strakke baardlijnen.</p>
         </div>
@@ -68,30 +68,14 @@
     <div class="container">
       <h2>Prijslijst</h2>
       <div class="prices" role="list">
-        <div class="price-row" role="listitem">
-          <span class="name">Knippen</span><span>€28</span>
-        </div>
-        <div class="price-row" role="listitem">
-          <span class="name">Knippen + Baard</span><span>€40</span>
-        </div>
-        <div class="price-row" role="listitem">
-          <span class="name">Baard modelleren</span><span>€25</span>
-        </div>
-        <div class="price-row" role="listitem">
-          <span class="name">Gezichtsbehandeling</span><span>€35</span>
-        </div>
-        <div class="price-row" role="listitem">
-          <span class="name">Touw epileren</span><span>€15</span>
-        </div>
-        <div class="price-row" role="listitem">
-          <span class="name">Harsen (oor/neus/gezicht)</span><span>€20</span>
-        </div>
-        <div class="price-row" role="listitem">
-          <span class="name">Wassen &amp; hoofdmassage</span><span>€15</span>
-        </div>
-        <div class="price-row" role="listitem">
-          <span class="name">VIP Pakket</span><span class="note">Op aanvraag</span>
-        </div>
+        <div class="price-row" role="listitem"><span class="name">Knippen</span><span>€28</span></div>
+        <div class="price-row" role="listitem"><span class="name">Knippen + Baard</span><span>€40</span></div>
+        <div class="price-row" role="listitem"><span class="name">Baard modelleren</span><span>€25</span></div>
+        <div class="price-row" role="listitem"><span class="name">Gezichtsbehandeling</span><span>€35</span></div>
+        <div class="price-row" role="listitem"><span class="name">Touw epileren</span><span>€15</span></div>
+        <div class="price-row" role="listitem"><span class="name">Harsen (oor/neus/gezicht)</span><span>€20</span></div>
+        <div class="price-row" role="listitem"><span class="name">Wassen &amp; hoofdmassage</span><span>€15</span></div>
+        <div class="price-row" role="listitem"><span class="name">VIP Pakket</span><span class="note">Op aanvraag</span></div>
       </div>
     </div>
   </section>
@@ -107,26 +91,15 @@
     </div>
   </section>
 
-  <section id="reviews">
+  <section id="reviews" data-google-api-key="YOUR_API_KEY" data-place-id="YOUR_PLACE_ID" data-google-reviews>
     <div class="container">
       <h2>Reviews</h2>
       <div class="reviews">
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>“Super strak geknipt en fijne service. Aanrader!”</p>
-          <small>— Klant</small>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>“Goede sfeer en top resultaat. Kom zeker terug.”</p>
-          <small>— Klant</small>
-        </div>
-        <div class="review">
-          <div class="stars">★★★★★</div>
-          <p>“Setmore boeking werkt ideaal, snel geholpen.”</p>
-          <small>— Klant</small>
-        </div>
+        <div class="review"><div class="stars" aria-label="Beoordeling 5 van 5">★★★★★</div><p>“Super strak geknipt en fijne service. Aanrader!”</p><small>— Klant</small></div>
+        <div class="review"><div class="stars" aria-label="Beoordeling 5 van 5">★★★★★</div><p>“Goede sfeer en top resultaat. Kom zeker terug.”</p><small>— Klant</small></div>
+        <div class="review"><div class="stars" aria-label="Beoordeling 5 van 5">★★★★★</div><p>“Boeken ging snel, top!”</p><small>— Klant</small></div>
       </div>
+      <p class="reviews-note" style="margin-top:10px"><strong data-google-average></strong></p>
       <p style="margin-top:14px"><a class="cta" href="https://share.google/qaY4we6W6XbcqFsQl" target="_blank" rel="noopener">Bekijk alle reviews op Google</a></p>
     </div>
   </section>
@@ -135,6 +108,9 @@
     <div class="container contact-wrap">
       <div class="contact-block">
         <h2>Contact</h2>
+        <div class="map-embed" style="margin-bottom:14px">
+          <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Middachtensingel+145,+6825+HK+Arnhem&output=embed" aria-label="Kaart van Master Barbershop in Arnhem"></iframe>
+        </div>
         <p><strong>Adres:</strong> <a href="https://share.google/qaY4we6W6XbcqFsQl" target="_blank" rel="noopener">Middachtensingel 145, 6825 HK Arnhem</a></p>
         <p><strong>Telefoon:</strong> <a href="tel:+31687092020">06 8709 2020</a></p>
         <p><strong>E-mail:</strong> <a href="mailto:masterbarbershop@gmail.com">masterbarbershop@gmail.com</a></p>
@@ -158,8 +134,9 @@
   <section id="afspraak" class="appointment">
     <div class="container">
       <h2>Afspraak maken</h2>
-      <p>Plan eenvoudig online via onze Setmore module.</p>
-      <a class="cta" href="https://masterbarbershoparnhem.setmore.com" target="_blank" rel="noopener">Open Setmore</a>
+      <p>Kies je moment en bevestig online. Je betaalt gewoon in de shop.</p>
+      <a class="cta" href="https://masterbarbershoparnhem.setmore.com" target="_blank" rel="noopener">Plan afspraak</a>
+      <div class="fineprint">Door te boeken ga je naar onze beveiligde boekingspagina.</div>
     </div>
   </section>
 
@@ -173,5 +150,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/reviews.js"></script>
 </body>
 </html>
