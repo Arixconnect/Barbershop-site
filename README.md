@@ -1,15 +1,10 @@
-# Master Barbershop – v3 (Zwart/Wit/Chroom + Reviews + Icons)
+# Master Barbershop – v5 (Marketing-fine-tuning)
 
-Wat is nieuw:
-- Huistijl zwart/wit/chroom (consistente styling voor Chrome & Safari).
-- Nieuwe dienst-iconen: tondeuse (knippen), schaar (knippen+baard), baard (modelleren).
-- Setmore: https://masterbarbershoparnhem.setmore.com
-- Contact: 06 8709 2020 · masterbarbershop@gmail.com · Middachtensingel 145 (linkt naar Google Maps).
-- Instagram: https://www.instagram.com/master_barbershopm/
-- Reviews-sectie + knop “Bekijk alle reviews op Google”.
+- **Logo linksboven** (aangeleverd logo.png).
+- **Hero** met je interieurfoto als achtergrond (hero.jpg).
+- **Neutralere boeking**: CTAs “Boek nu / Plan afspraak” (geen Setmore-naam in de UI).
+- Sticky **Boek nu** knop in de navigatie.
+- **Nieuwe schaar-icoon** voor 'Knippen + Baard'.
+- Reviews + Google Map blijven aanwezig.
 
-## Te vervangen assets
-- `img/hero.jpg` (jouw foto).
-- `img/gallery1.jpg`, `img/gallery2.jpg`, `img/gallery3.jpg` (jouw foto’s).
-
-Upload de mapinhoud naar de root van je GitHub Pages-repo.
+Upload alle bestanden naar de root van je GitHub Pages repo.
