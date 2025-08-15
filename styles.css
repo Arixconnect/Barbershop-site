@@ -35,10 +35,3 @@ footer{padding:26px 0;border-top:1px solid #ddd;background:#f0f0f0;color:#555;fo
 .icon{width:28px;height:28px;vertical-align:middle;margin-right:8px}
 .services .card h3{display:flex;align-items:center;gap:8px;margin:0 0 6px}
 .services .card p{margin:0;color:#555}
-
-
-/* Chrome gradient effect for icons */
-.icon {
-  fill: url(#chrome-gradient);
-  filter: drop-shadow(0 0 1px rgba(0,0,0,0.2));
-}
