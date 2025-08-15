@@ -1,153 +1,177 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Master Barbershop – Arnhem</title>
-  <meta name="description" content="Master Barbershop in Arnhem – specialist in baard modelleren en VIP-behandelingen.">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <meta name="description" content="Master Barbershop – exclusieve knip- en scheerbehandelingen in Arnhem. Zwart, wit en chroom huistijl.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Echte hero? zet 'img/hero.jpg' in /img. */
+    @media (min-width:0){ .hero { background-image: url('img/hero.jpg'), url('img/hero.png'); } }
+  </style>
 </head>
 <body>
-<header>
-  <div class="container">
-    <nav>
-      <div class="brand">
-        <img src="assets/logo.png" alt="Master Barbershop" class="logo">
-      </div>
-      <div class="nav-links">
-        <a href="#services">Diensten</a>
-        <a href="#prijzen">Prijzen</a>
-        <a href="#gallery">Galerij</a>
-        <a href="#booking" class="btn">Maak afspraak</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="container text">
-    <span class="badge">Arnhem • Middachtensingel 145</span>
-    <h1>Strakke kapsels & perfecte baarden</h1>
-    <p>Exclusieve knip- en scheerbehandelingen in een luxe setting met pooltafel en marmeren tegels. Reserveer en ervaar kwaliteit.</p>
-    <a href="#booking" class="btn">Nu boeken</a>
-  </div>
-</section>
-
-<section id="services" class="services">
-  <div class="container">
-    <h2>Onze Diensten</h2>
-    <div class="grid">
-      <div class="card">
-        <h3><img src="assets/icons/scissors.svg" alt="" class="icon">Knippen</h3>
-        <p>Moderne en klassieke coupes, strak afgewerkt.</p>
-      </div>
-      <div class="card">
-        <h3><img src="assets/icons/beard.svg" alt="" class="icon">Knippen + Baard</h3>
-        <p>Combinatiebehandeling voor een complete look.</p>
-      </div>
-      <div class="card">
-        <h3><img src="assets/icons/beard.svg" alt="" class="icon">Baard modelleren</h3>
-        <p>Strakke contouren en vorm, precies op maat.</p>
-      </div>
-      <div class="card">
-        <h3><img src="assets/icons/straight-razor.svg" alt="" class="icon">Baard scheren</h3>
-        <p>Glad resultaat met hete handdoek en verzorging.</p>
-      </div>
-      <div class="card">
-        <h3><img src="assets/icons/comb.svg" alt="" class="icon">Gezichtsbehandeling</h3>
-        <p>Reiniging, verzorging en ontspanning.</p>
-      </div>
-      <div class="card">
-        <h3><img src="assets/icons/threading.svg" alt="" class="icon">Touw epileren</h3>
-        <p>Strakke wenkbrauwen met precisie.</p>
-      </div>
-      <div class="card">
-        <h3><img src="assets/icons/wax-pot.svg" alt="" class="icon">Harsen (oor/neus/gezicht)</h3>
-        <p>Snel, hygiënisch en effectief.</p>
-      </div>
-      <div class="card">
-        <h3><img src="assets/icons/wash-massage.svg" alt="" class="icon">Wassen & hoofdmassage</h3>
-        <p>Ontspannend en verfrissend voor de hoofdhuid.</p>
-      </div>
-      <div class="card">
-        <h3><img src="assets/icons/crown-vip.svg" alt="" class="icon">VIP Pakket</h3>
-        <p>Luxe combinatie van meerdere services.</p>
-      </div>
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand" aria-label="Master Barbershop home">
+        <span class="logo">MB</span>
+        <span>Master Barbershop</span>
+      </a>
+      <nav>
+        <a href="#diensten">Diensten</a>
+        <a href="#prijzen">Prijslijst</a>
+        <a href="#galerij">Galerij</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#afspraak">Afspraak</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<section id="prijzen" class="pricelist">
-  <div class="container">
-    <h2>Prijslijst</h2>
-    <table>
-      <tr><th>Behandeling</th><th>Prijs</th></tr>
-      <tr><td>Knippen</td><td>€28</td></tr>
-      <tr><td>Knippen + Baard</td><td>€40</td></tr>
-      <tr><td>Baard modelleren</td><td>€25</td></tr>
-      <tr><td>Gezichtsbehandeling</td><td>€35</td></tr>
-      <tr><td>Touw epileren</td><td>€15</td></tr>
-      <tr><td>Harsen</td><td>€20</td></tr>
-      <tr><td>Wassen & hoofdmassage</td><td>€15</td></tr>
-      <tr><td>VIP Pakket</td><td>Op aanvraag</td></tr>
-    </table>
-  </div>
-</section>
-
-<section id="gallery" class="gallery">
-  <div class="container">
-    <h2>Galerij</h2>
-    <div class="grid">
-      <img src="assets/gallery1.jpg" alt="Knippen">
-      <img src="assets/gallery2.jpg" alt="Barberstoel">
-      <img src="assets/gallery3.jpg" alt="Baard trimmen">
-      <img src="assets/gallery4.jpg" alt="Interieur met marmer">
+  <section class="hero" role="banner" aria-label="Hero">
+    <div class="inner container">
+      <h1>Strakke kapsels & perfecte baarden</h1>
+      <p>Zwart • Wit • Chroom — vakmanschap met oog voor detail.</p>
+      <a href="#afspraak" class="cta">Plan direct een afspraak</a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="booking" class="booking">
-  <div class="container">
-    <h2>Online Afspraak Maken</h2>
-    <div class="card">
-      <p>Klik op de knop hieronder om via onze Setmore-pagina een afspraak te maken.</p>
-      <a class="btn" target="_blank" href="https://booking.setmore.com/schedule/testlink123">Boek Nu</a>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="container">
-    <h2>Contact & Openingstijden</h2>
-    <div class="kv">
-      <div class="card">
-        <h3>Adres</h3>
-        <p>Middachtensingel 145<br>Arnhem</p>
-        <h3>Openingstijden</h3>
-        <table class="opening-table">
-          <tr><td>Maandag</td><td>12:00 – 19:00</td></tr>
-          <tr><td>Dinsdag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Woensdag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Donderdag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Vrijdag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Zaterdag</td><td>10:00 – 19:00</td></tr>
-          <tr><td>Zondag</td><td>Gesloten</td></tr>
-        </table>
-      </div>
-      <div class="card">
-        <h3>Route</h3>
-        <div style="aspect-ratio:4/3;border:1px solid #ddd;border-radius:12px;overflow:hidden">
-          <iframe src="https://maps.google.com/maps?q=Middachtensingel%20145%20Arnhem&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+  <section id="diensten">
+    <div class="container">
+      <h2>Diensten</h2>
+      <div class="services">
+        <div class="card">
+          <img src="img/icon_clipper.png" alt="" class="icon" loading="lazy">
+          <h3>Knippen</h3>
+          <p>Moderne en klassieke coupes, strak afgewerkt.</p>
+        </div>
+        <div class="card">
+          <img src="img/icon_scissors.svg" alt="" class="icon" loading="lazy">
+          <h3>Knippen + Baard</h3>
+          <p>Alles-in-één: frisse coupe en strakke baardlijnen.</p>
+        </div>
+        <div class="card">
+          <img src="img/icon_beard.png" alt="" class="icon" loading="lazy">
+          <h3>Baard modelleren</h3>
+          <p>Precisie trimming en verzorging op maat.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container">© <span id="year"></span> Master Barbershop – Ma 12:00–19:00 • Di–Za 10:00–19:00 • Zo gesloten</div>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <section id="prijzen">
+    <div class="container">
+      <h2>Prijslijst</h2>
+      <div class="prices" role="list">
+        <div class="price-row" role="listitem">
+          <span class="name">Knippen</span><span>€28</span>
+        </div>
+        <div class="price-row" role="listitem">
+          <span class="name">Knippen + Baard</span><span>€40</span>
+        </div>
+        <div class="price-row" role="listitem">
+          <span class="name">Baard modelleren</span><span>€25</span>
+        </div>
+        <div class="price-row" role="listitem">
+          <span class="name">Gezichtsbehandeling</span><span>€35</span>
+        </div>
+        <div class="price-row" role="listitem">
+          <span class="name">Touw epileren</span><span>€15</span>
+        </div>
+        <div class="price-row" role="listitem">
+          <span class="name">Harsen (oor/neus/gezicht)</span><span>€20</span>
+        </div>
+        <div class="price-row" role="listitem">
+          <span class="name">Wassen &amp; hoofdmassage</span><span>€15</span>
+        </div>
+        <div class="price-row" role="listitem">
+          <span class="name">VIP Pakket</span><span class="note">Op aanvraag</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="galerij">
+    <div class="container">
+      <h2>Galerij</h2>
+      <div class="gallery-grid">
+        <img src="img/gallery1.jpg" alt="Voorbeeld kapsel 1" onerror="this.src='img/gallery1.png'">
+        <img src="img/gallery2.jpg" alt="Voorbeeld kapsel 2" onerror="this.src='img/gallery2.png'">
+        <img src="img/gallery3.jpg" alt="Voorbeeld kapsel 3" onerror="this.src='img/gallery3.png'">
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <h2>Reviews</h2>
+      <div class="reviews">
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Super strak geknipt en fijne service. Aanrader!”</p>
+          <small>— Klant</small>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Goede sfeer en top resultaat. Kom zeker terug.”</p>
+          <small>— Klant</small>
+        </div>
+        <div class="review">
+          <div class="stars">★★★★★</div>
+          <p>“Setmore boeking werkt ideaal, snel geholpen.”</p>
+          <small>— Klant</small>
+        </div>
+      </div>
+      <p style="margin-top:14px"><a class="cta" href="https://share.google/qaY4we6W6XbcqFsQl" target="_blank" rel="noopener">Bekijk alle reviews op Google</a></p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container contact-wrap">
+      <div class="contact-block">
+        <h2>Contact</h2>
+        <p><strong>Adres:</strong> <a href="https://share.google/qaY4we6W6XbcqFsQl" target="_blank" rel="noopener">Middachtensingel 145, 6825 HK Arnhem</a></p>
+        <p><strong>Telefoon:</strong> <a href="tel:+31687092020">06 8709 2020</a></p>
+        <p><strong>E-mail:</strong> <a href="mailto:masterbarbershop@gmail.com">masterbarbershop@gmail.com</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/master_barbershopm/" target="_blank" rel="noopener">@master_barbershopm</a></p>
+      </div>
+      <aside class="hours" aria-label="Openingstijden">
+        <h3>Openingstijden</h3>
+        <ul>
+          <li><span>Maandag</span><span>12:00 – 19:00</span></li>
+          <li><span>Dinsdag</span><span>10:00 – 19:00</span></li>
+          <li><span>Woensdag</span><span>10:00 – 19:00</span></li>
+          <li><span>Donderdag</span><span>10:00 – 19:00</span></li>
+          <li><span>Vrijdag</span><span>10:00 – 19:00</span></li>
+          <li><span>Zaterdag</span><span>10:00 – 19:00</span></li>
+          <li><span>Zondag</span><span>Gesloten</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="afspraak" class="appointment">
+    <div class="container">
+      <h2>Afspraak maken</h2>
+      <p>Plan eenvoudig online via onze Setmore module.</p>
+      <a class="cta" href="https://masterbarbershoparnhem.setmore.com" target="_blank" rel="noopener">Open Setmore</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-flex">
+      <small>© 2025 Master Barbershop. Alle rechten voorbehouden.</small>
+      <div class="socials">
+        <a aria-label="Instagram" href="https://www.instagram.com/master_barbershopm/" title="Instagram" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/><circle cx="12" cy="12" r="4" stroke="currentColor"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
