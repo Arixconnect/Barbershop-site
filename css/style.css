@@ -21,3 +21,40 @@ h1, h2, h3, .section-title {
     background-color: #333;
     color: #fff;
 }
+
+
+/* Reviews section styling */
+.reviews-section {
+    padding: 60px 0;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+.review-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+.stars {
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+.review-text {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.review-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+}
+.review-button:hover {
+    background: #333;
+}
