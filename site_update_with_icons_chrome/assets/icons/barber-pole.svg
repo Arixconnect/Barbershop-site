@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+<defs>
+  <linearGradient id="chrome-gradient" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#e6e6e6"/>
+    <stop offset="50%" stop-color="#b3b3b3"/>
+    <stop offset="100%" stop-color="#f0f0f0"/>
+  </linearGradient>
+</defs><rect x="9" y="4" width="6" height="16" rx="3"/><path d="M9 7l6 3M9 11l6 3M9 15l6 3"/><circle cx="12" cy="3" r="1.8"/><circle cx="12" cy="21" r="1.8"/></svg>
