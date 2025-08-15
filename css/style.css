@@ -58,3 +58,78 @@ h1, h2, h3, .section-title {
 .review-button:hover {
     background: #333;
 }
+
+
+/* Pricing section styling */
+.pricing-section {
+  padding: 60px 0;
+  background-color: #fff;
+  color: #000;
+}
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.pricing-column {
+  flex: 1;
+  min-width: 280px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.pricing-column h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+.pricing-column ul, .pricing-column ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pricing-column ul li, .pricing-column ol li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.price {
+  font-weight: bold;
+}
+.vip {
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  border: 2px solid #ccc;
+}
+.vip-price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0 20px;
+}
+
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+.footer-icons img {
+  width: 32px;
+  height: 32px;
+  filter: grayscale(100%);
+  transition: filter 0.3s, transform 0.3s;
+}
+.footer-icons img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
