@@ -1,0 +1,23 @@
+
+
+/* Chrome metallic look for titles */
+h1, h2, h3, .section-title {
+    background: linear-gradient(180deg, #ffffff, #cccccc 40%, #999999 60%, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Bigger logo */
+.navbar-logo img {
+    height: 50px;
+}
+
+/* Black CTA button */
+.cta-black {
+    background-color: #000;
+    color: #fff;
+}
+.cta-black:hover {
+    background-color: #333;
+    color: #fff;
+}
