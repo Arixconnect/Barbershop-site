@@ -1,1 +1,0 @@
-Upload deze map naar je GitHub Pages repository om de site te publiceren.
