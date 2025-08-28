@@ -51,10 +51,10 @@ h2{margin:0 0 18px}
 
 .gallery-grid img {
   width: 100%;
-  height: auto; /* laat hoogte meegroeien met de breedte */
-  border-radius: 12px; /* afgeronde hoeken */
-  object-fit: cover;   /* foto’s vullen zonder vervormen */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtiele schaduw */
+  height: 260px; /* vaste hoogte op desktop */
+  border-radius: 12px;
+  object-fit: cover; /* zorgt dat kapsels altijd centraal staan */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -63,14 +63,14 @@ h2{margin:0 0 18px}
   box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
 
-/* Responsiveness */
+/* Responsive aanpassingen */
 @media (max-width: 900px) {
   .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .gallery-grid img { height: 220px; } /* iets lager op tablet */
 }
 
-@media (max-width: 560px) {
-  .gallery-grid { grid-template-columns: 1fr; }
-}
+@media (
+
 
 .reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .review{background:#fff;border:1px solid #eee;border-radius:16px;padding:18px;box-shadow:var(--shadow)}
