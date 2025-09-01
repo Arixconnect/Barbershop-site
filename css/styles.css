@@ -426,6 +426,99 @@ h2 {
   }
 }
 
+/* ==== Contact sectie ==== */
+.contact-wrap {
+  padding: 60px 20px;
+}
+
+.contact-wrap h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Grid layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr; /* 3 kolommen: openingstijden, contact, maps */
+  gap: 30px;
+  align-items: start;
+}
+
+/* Blokken styling */
+.contact-block,
+.hours,
+.map-embed {
+  background: var(--card-bg);
+  border: 1px solid #333;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Openingstijden lijst */
+.hours h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.hours ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+
+.hours li:last-child {
+  border-bottom: none;
+}
+
+.hours span:first-child {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.hours span:last-child {
+  color: var(--muted);
+  margin-left: 12px;
+}
+
+/* Contactgegevens */
+.contact-block p {
+  margin-bottom: 12px;
+}
+
+.contact-block a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  color: #FFD700; /* goud accent */
+}
+
+/* Maps */
+.map-embed iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* alles onder elkaar */
+  }
+}
+
 
 /* ==== Footer ==== */
 footer {
