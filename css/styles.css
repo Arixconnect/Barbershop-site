@@ -131,8 +131,9 @@ section {
 }
 
 h2 {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
   font-size: 2rem;
+  text-align: center; /* altijd in het midden */
   background: var(--accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -149,26 +150,31 @@ h2 {
   padding: 20px;
   color: var(--ink);
   box-shadow: var(--shadow);
-}
-
-.card p,
-.review small {
-  color: var(--muted);
+  margin-bottom: 18px; /* extra ruimte tussen kaarten */
+  display: flex;
+  align-items: center;
+  gap: 14px; /* ruimte tussen icoon en tekst */
 }
 
 /* ==== Iconen ==== */
 .icon {
   filter: brightness(0) invert(1); /* maakt zwarte iconen wit */
-  width: 36px;
+  width: 32px; /* iets subtieler formaat */
   height: auto;
   flex-shrink: 0;
 }
 
+/* ==== Card layout ==== */
 .card {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-direction: row-reverse; /* zet icoon rechts naast tekst */
+  gap: 14px;
+  flex-direction: row; /* icoon links, tekst rechts */
+}
+
+.card p,
+.review small {
+  color: var(--muted);
 }
 
 /* === Prijslijst sectie met marmeren achtergrond === */
