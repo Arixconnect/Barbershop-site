@@ -115,7 +115,7 @@
     <div class="contact-grid">
       
       <!-- Openingstijden -->
-      <aside class="hours">
+      <aside class="hours" aria-label="Openingstijden">
         <h3>Openingstijden</h3>
         <ul>
           <li><span>Maandag</span><span>12:00 – 19:00</span></li>
@@ -133,17 +133,30 @@
         <p><strong>Adres:</strong> Middachtensingel 145, 6825 HK Arnhem</p>
         <p><strong>Telefoon:</strong> <a href="tel:+31626463142">0626463142</a></p>
         <p><strong>E-mail:</strong> <a href="mailto:masterbarbershop@gmail.com">masterbarbershop@gmail.com</a></p>
-        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/masterbarbershop_arnhem/" target="_blank">@masterbarbershop_arnhem</a></p>
+        
+        <!-- Social media icoontjes -->
+        <div class="contact-socials">
+          <a href="https://www.instagram.com/masterbarbershop_arnhem/" target="_blank" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/><circle cx="12" cy="12" r="4" stroke="currentColor"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@masterbarbershop_arnhem0" target="_blank" aria-label="TikTok">
+            <svg width="22" height="22" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M168 0h40a48 48 0 0 0 48 48v40a88.1 88.1 0 0 1-88-88zM80 104a40 40 0 0 1 40-40h8V0h40v160a72 72 0 1 1-88-70.3V104z"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
-      <!-- Google Maps -->
+      <!-- Maps -->
       <div class="map-embed">
-        <iframe loading="lazy" src="https://www.google.com/maps?q=Middachtensingel+145,+6825+HK+Arnhem&output=embed" aria-label="Kaart van Master Barbershop in Arnhem"></iframe>
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Middachtensingel+145,+6825+HK+Arnhem&output=embed"
+          aria-label="Kaart van Master Barbershop in Arnhem">
+        </iframe>
       </div>
     </div>
   </div>
 </section>
-
 
   <!-- Afspraak -->
   <section id="afspraak" class="appointment">
