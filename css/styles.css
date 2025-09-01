@@ -202,7 +202,7 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-/* individuele rijen */
+/* individuele prijs-rijen */
 #prijzen .price-row {
   display: flex;
   justify-content: space-between;
@@ -210,10 +210,16 @@ h2 {
   background: rgba(0, 0, 0, 0.35); /* transparant zodat marmer zichtbaar blijft */
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  padding: 14px 20px;
-  margin-bottom: 14px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  backdrop-filter: blur(2px); /* lichte blur voor luxe effect */
+  backdrop-filter: blur(3px); /* luxe effect */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#prijzen .price-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
 }
 
 #prijzen .price-row .name {
