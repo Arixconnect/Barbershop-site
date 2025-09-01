@@ -1,130 +1,186 @@
-
-
-/* Chrome metallic look for titles */
-h1, h2, h3, .section-title {
-    background: linear-gradient(180deg, #ffffff, #cccccc 40%, #999999 60%, #e0e0e0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* ==== Donkere stijl Master Barbershop ==== */
+:root {
+  --ink: #f5f5f5; /* standaard tekstkleur = wit */
+  --bg: #111111;  /* achtergrond = bijna zwart */
+  --muted: #cccccc; /* subtiel grijs */
+  --card-bg: #1a1a1a; /* blokken donkergrijs */
+  --accent: linear-gradient(180deg, #ffffff, #cccccc 40%, #999999 60%, #e0e0e0); /* metallic/chrome */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --radius: 12px;
 }
 
-/* Bigger logo */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ==== Navigatie ==== */
+header {
+  background: rgba(20, 20, 20, 0.95);
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 .navbar-logo img {
-    height: 50px;
+  height: 55px;
 }
 
-/* Black CTA button */
-.cta-black {
-    background-color: #000;
-    color: #fff;
+.navbar-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
 }
-.cta-black:hover {
-    background-color: #333;
-    color: #fff;
+.navbar-links a:hover {
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* ==== Hero ==== */
+.hero {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  color: #ddd;
+}
 
-/* Reviews section styling */
+/* ==== Buttons ==== */
+.cta, .cta-black, .review-button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  border: 1px solid #999;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cta:hover, .cta-black:hover, .review-button:hover {
+  border-color: #ccc;
+  background: linear-gradient(180deg, #e0e0e0, #999999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==== Secties ==== */
+section {
+  padding: 60px 0;
+}
+h2, h3, .section-title {
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==== Reviews ==== */
 .reviews-section {
-    padding: 60px 0;
-    background-color: #111;
-    color: #fff;
-    text-align: center;
+  background: #111;
+  text-align: center;
 }
 .review-card {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 400px;
-    margin: 0 auto;
-    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 400px;
+  margin: auto;
 }
 .stars {
-    font-size: 1.5rem;
-    color: #ccc;
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #ccc;
 }
 .review-text {
-    font-style: italic;
-    margin-bottom: 15px;
-}
-.review-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #000;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-}
-.review-button:hover {
-    background: #333;
+  font-style: italic;
+  color: var(--muted);
 }
 
-
-/* Pricing section styling */
+/* ==== Pricing ==== */
 .pricing-section {
-  padding: 60px 0;
-  background-color: #fff;
-  color: #000;
-}
-.pricing-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  background: #111;
 }
 .pricing-column {
-  flex: 1;
-  min-width: 280px;
-  background: #f9f9f9;
+  background: var(--card-bg);
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 .pricing-column h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #333;
   padding-bottom: 5px;
-  margin-bottom: 10px;
 }
-.pricing-column ul, .pricing-column ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.pricing-column ul li, .pricing-column ol li {
+.pricing-column li {
   display: flex;
   justify-content: space-between;
-  padding: 5px 0;
-  border-bottom: 1px solid #e0e0e0;
-}
-.price {
-  font-weight: bold;
+  padding: 6px 0;
+  border-bottom: 1px solid #333;
 }
 .vip {
-  background: linear-gradient(145deg, #e0e0e0, #ffffff);
-  border: 2px solid #ccc;
-}
-.vip-price {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 10px 0 20px;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 2px solid #999;
 }
 
-
-/* Responsive design */
-.hamburger {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
+/* ==== Galerie ==== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+.gallery-grid img:hover {
+  transform: scale(1.03);
 }
 
-.navbar-links {
-  display: flex;
+/* ==== Footer ==== */
+footer {
+  background: #111;
+  color: var(--muted);
+  border-top: 1px solid #333;
+  padding: 30px 0;
+  text-align: center;
+}
+.socials a {
+  background: var(--card-bg);
+  border: 1px solid #333;
+  color: var(--ink);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
+.socials a:hover {
+  border-color: #999;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* ==== Responsive ==== */
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
@@ -135,28 +191,25 @@ h1, h2, h3, .section-title {
     right: 0;
     width: 200px;
     padding: 10px;
-    z-index: 1000;
   }
   .navbar-links.active {
     display: flex;
   }
   .hamburger {
     display: block;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
   }
   .pricing-grid {
     flex-direction: column;
   }
   .gallery-grid {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr;
   }
   .hero h1 {
-    font-size: 1.8rem;
-  }
-  .hero p {
-    font-size: 1rem;
-  }
-  .cta-button {
-    padding: 12px 20px;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
+
