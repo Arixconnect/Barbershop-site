@@ -236,3 +236,16 @@ footer {
   display: block;
   margin: 0 auto; /* centreert icoon in de card */
 }
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* ruimte tussen icoon en tekst */
+}
+
+.card .icon {
+  width: 36px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  flex-shrink: 0; /* icoon krimpt niet */
+}
