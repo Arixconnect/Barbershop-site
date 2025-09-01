@@ -193,7 +193,55 @@
     </div>
   </footer>
 
-  <script src="js/reviews.js"></script>
+ <!-- Nieuwe dynamische reviews sectie -->
+<section id="reviews" class="reviews-section">
+  <div class="container">
+    <h2 class="section-title">Reviews</h2>
+    <div id="google-reviews" class="reviews-grid"></div>
+  </div>
+</section>
+
+<script>
+  async function loadReviews() {
+    const apiKey = "JOUW_API_KEY_HIER"; // vervang door jouw API key
+    const placeId = "ChIJ1R4rk4xjz0cRQN93YvD0h8ek"; // Master Barbershop Arnhem
+    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,reviews&key=${apiKey}`;
+
+    try {
+      const response = await fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`);
+      const data = await response.json();
+
+      if (data.result && data.result.reviews) {
+        const container = document.getElementById("google-reviews");
+        container.innerHTML = data.result.reviews.slice(0, 3).map(r => `
+          <div class="review-card">
+            <div class="stars">${"★".repeat(Math.round(r.rating))}</div>
+            <p class="review-text">"${r.text}"</p>
+            <small>- ${r.author_name}</small>
+          </div>
+        `).join("");
+      } else {
+        document.getElementById("google-reviews").innerHTML = "<p>Geen reviews gevonden.</p>";
+      }
+    } catch (err) {
+      console.error("Error loading reviews:", err);
+      document.getElementById("google-reviews").innerHTML = "<p>Reviews konden niet geladen worden.</p>";
+    }
+  }
+
+  loadReviews();
+</script>
+
+<script>
+function toggleMenu() {
+  var links = document.querySelector('.navbar-links');
+  if (links) {
+    links.classList.toggle('active');
+  }
+}
+</script>
+</body>
+</html>
 
 <script>
 function toggleMenu() {
