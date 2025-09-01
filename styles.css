@@ -1,4 +1,109 @@
-:root{
+:root{ /* ==== Donkere stijl Master Barbershop ==== */
+
+:root {
+  --ink: #f5f5f5;          /* standaard tekstkleur = wit */
+  --bg: #111111;           /* achtergrond = bijna zwart */
+  --muted: #cccccc;        /* subtiel grijs voor secundaire tekst */
+  --card-bg: #1a1a1a;      /* donkergrijs voor kaarten en blokken */
+  --accent: linear-gradient(180deg, #ffffff, #bfbfbf 40%, #999999 60%, #e0e0e0); /* metallic/chrome */
+  --shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* Achtergrond en tekst */
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: rgba(20,20,20,0.95);
+  border-bottom: 1px solid #333;
+}
+
+/* Navigatie links */
+.menu a {
+  color: var(--ink);
+  font-weight: 500;
+}
+.menu a:hover {
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero sectie */
+.hero {
+  color: #fff;
+}
+.hero p {
+  color: #ddd;
+}
+
+/* Sectietitels */
+h1, h2, h3, .section-title {
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards (diensten, prijzen, reviews, contact) */
+.card,
+.price-row,
+.review,
+.contact-block,
+.hours {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+.card p,
+.price-row .note,
+.review small {
+  color: var(--muted);
+}
+
+/* Buttons (chrome style) */
+.cta,
+.cta-link,
+.review-button {
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid #999;
+  font-weight: 700;
+  text-decoration: none;
+}
+.cta:hover,
+.cta-link:hover,
+.review-button:hover {
+  background: linear-gradient(180deg, #e0e0e0, #999999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: #ccc;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: var(--muted);
+  border-top: 1px solid #333;
+}
+
+/* Social icons */
+.socials a {
+  background: var(--card-bg);
+  color: var(--ink);
+  border: 1px solid #333;
+}
+.socials a:hover {
+  border-color: #999;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
   --ink:#0b0b0b;
   --bg:#ffffff;
   --muted:#6d6d6d;
