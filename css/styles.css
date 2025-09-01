@@ -101,7 +101,9 @@ header {
 }
 
 /* ==== CTA Buttons ==== */
-.cta, .cta-link, .review-button {
+.cta,
+.cta-link,
+.review-button {
   display: inline-block;
   padding: 12px 22px;
   border-radius: 999px;
@@ -114,7 +116,9 @@ header {
   transition: all 0.3s ease;
 }
 
-.cta:hover, .cta-link:hover, .review-button:hover {
+.cta:hover,
+.cta-link:hover,
+.review-button:hover {
   background: linear-gradient(180deg, #e0e0e0, #999999);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -134,9 +138,8 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-/* ==== Cards (diensten, prijzen, reviews, contact) ==== */
+/* ==== Cards (diensten, reviews, contact) ==== */
 .card,
-.price-row,
 .review,
 .contact-block,
 .hours {
@@ -149,9 +152,54 @@ h2 {
 }
 
 .card p,
-.price-row .note,
 .review small {
   color: var(--muted);
+}
+
+/* ==== Iconen ==== */
+.icon {
+  filter: brightness(0) invert(1); /* maakt zwarte iconen wit */
+  width: 36px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: row-reverse; /* zet icoon rechts naast tekst */
+}
+
+/* ==== Prijslijst sectie ==== */
+#prijzen {
+  position: relative;
+  min-height: 400px;
+  padding: 60px 20px;
+  background: url('../img/marble-bg.jpg') center/cover no-repeat fixed;
+  color: #fff;
+  overflow: hidden;
+}
+
+#prijzen::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay voor leesbaarheid */
+  z-index: 0;
+}
+
+#prijzen .container {
+  position: relative;
+  z-index: 1; /* tekst boven overlay */
+}
+
+#prijzen .price-row {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 /* ==== Gallery ==== */
@@ -222,70 +270,4 @@ footer {
   .hero h1 { font-size: 1.8rem; }
   .hero p { font-size: 1rem; }
   .cta { padding: 10px 18px; font-size: 1rem; }
-}
-
-/* ==== Fix iconen voor donkere stijl ==== */
-.icon {
-  filter: brightness(0) invert(1); /* maakt zwarte iconen wit */
-}
-/* ==== Iconen netjes schalen ==== */
-.icon {
-  filter: brightness(0) invert(1); /* blijft wit */
-  width: 32px;   /* pas aan naar wens: 32px, 36px, 40px */
-  height: auto;  /* behoudt de verhouding */
-  display: block;
-  margin: 0 auto; /* centreert icoon in de card */
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  gap: 12px; /* ruimte tussen icoon en tekst */
-}
-
-.card {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-direction: row-reverse; /* draait de volgorde om */
-}
-
-.card .icon {
-  width: 36px;
-  height: auto;
-  filter: brightness(0) invert(1);
-  flex-shrink: 0;
-}
-
-
-
-/* === Prijslijst sectie met marmeren achtergrond === */
-#prijzen {
-  position: relative;
-  min-height: 400px;
-  padding: 60px 20px;
-  background: url('../img/marble-bg.jpg') center/cover no-repeat fixed;
-  color: #fff;
-  overflow: hidden;
-}
-
-#prijzen::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* overlay voor leesbaarheid */
-  z-index: 0;
-}
-
-#prijzen .container {
-  position: relative;
-  z-index: 1; /* tekst boven overlay */
-}
-
-#prijzen .price-row {
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
-  padding: 14px 16px;
-  margin-bottom: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
