@@ -311,4 +311,34 @@ section#prijzen .container {
   position: relative;
   z-index: 1;
 }
-  
+
+/* === Prijslijst sectie met marmeren achtergrond === */
+#prijzen {
+  position: relative;
+  min-height: 400px;
+  padding: 60px 20px;
+  background: url('../img/marble-bg.jpg') center/cover no-repeat fixed;
+  color: #fff;
+  overflow: hidden;
+}
+
+#prijzen::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay voor leesbaarheid */
+  z-index: 0;
+}
+
+#prijzen .container {
+  position: relative;
+  z-index: 1; /* tekst boven overlay */
+}
+
+#prijzen .price-row {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
