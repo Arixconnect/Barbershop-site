@@ -275,3 +275,10 @@ footer {
   color: #fff; /* zodat tekst leesbaar blijft */
   padding: 60px 20px;
 }
+
+#prijzen {
+  background: #111 url('../img/marble-bg.jpeg') center/cover no-repeat;
+  color: #fff;
+  padding: 60px 20px;
+}
+  
