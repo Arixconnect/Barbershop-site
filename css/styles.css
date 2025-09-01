@@ -223,3 +223,9 @@ footer {
   .hero p { font-size: 1rem; }
   .cta { padding: 10px 18px; font-size: 1rem; }
 }
+
+/* ==== Fix iconen voor donkere stijl ==== */
+.icon {
+  filter: brightness(0) invert(1); /* maakt zwarte iconen wit */
+}
+
