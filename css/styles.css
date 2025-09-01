@@ -269,3 +269,9 @@ footer {
   padding: 20px;
   color: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  
+#prijzen {
+  background: url('../img/marble-bg.jpg') center/cover no-repeat;
+  color: #fff; /* zodat tekst leesbaar blijft */
+  padding: 60px 20px;
+}
