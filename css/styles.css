@@ -1,0 +1,225 @@
+/* ==== Master Barbershop donkere stijl ==== */
+
+:root {
+  --ink: #f5f5f5; /* standaard tekst = wit */
+  --bg: #111111; /* bijna zwart */
+  --muted: #cccccc; /* lichtgrijs */
+  --card-bg: #1a1a1a; /* donkergrijs voor blokken */
+  --accent: linear-gradient(180deg, #ffffff, #bfbfbf 40%, #999999 60%, #e0e0e0); /* metallic/chrome */
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ==== Header ==== */
+header {
+  background: rgba(20, 20, 20, 0.95);
+  border-bottom: 1px solid #333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+.brand img {
+  height: 55px;
+  width: auto;
+  display: block;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==== Hero ==== */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #111 url('../img/hero.jpg') center/cover no-repeat;
+  color: #fff;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.35), transparent);
+}
+
+.hero .inner {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  margin-bottom: 10px;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+/* ==== CTA Buttons ==== */
+.cta, .cta-link, .review-button {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid #999;
+  transition: all 0.3s ease;
+}
+
+.cta:hover, .cta-link:hover, .review-button:hover {
+  background: linear-gradient(180deg, #e0e0e0, #999999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: #ccc;
+}
+
+/* ==== Secties ==== */
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: 2rem;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==== Cards (diensten, prijzen, reviews, contact) ==== */
+.card,
+.price-row,
+.review,
+.contact-block,
+.hours {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  border-radius: var(--radius);
+  padding: 20px;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.card p,
+.price-row .note,
+.review small {
+  color: var(--muted);
+}
+
+/* ==== Gallery ==== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.7);
+}
+
+/* ==== Footer ==== */
+footer {
+  background: #111;
+  color: var(--muted);
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #333;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.socials a {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: var(--card-bg);
+  color: var(--ink);
+  border: 1px solid #333;
+  box-shadow: var(--shadow);
+}
+
+.socials a:hover {
+  border-color: #999;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 900px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; }
+  .contact-wrap { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .menu { gap: 14px; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+  .cta { padding: 10px 18px; font-size: 1rem; }
+}
