@@ -330,3 +330,9 @@ footer {
   .hero p { font-size: 1rem; }
   .cta { padding: 10px 18px; font-size: 1rem; }
 }
+
+/* === Sectietitels consistent centreren === */
+section h2, 
+section .section-title {
+  text-align: center;
+}
