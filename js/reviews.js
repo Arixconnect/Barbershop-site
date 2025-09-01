@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.getElementById("google-reviews");
 
-  // Fallback reviews (worden getoond als API faalt of leeg is)
+  // Fallback reviews (worden getoond als de API niet werkt of leeg is)
   const fallbackReviews = [
     {
       author: "Lars",
@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   ];
 
-  // Je Place ID (Master Barbershop Arnhem)
+  // Place ID van Master Barbershop Arnhem
   const placeId = "ChIJ61dQgK6j4AR4GeTYWZsKkWw";
 
-  // API KEY wordt via .env of server-side geladen -> niet hardcoden
+  // API key -> wordt via Netlify/omgeving geladen, niet hardcoded
   const apiKey = window.GOOGLE_API_KEY || ""; 
 
   // Google Places API URL
@@ -44,11 +44,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderReviews(fallbackReviews);
   }
 
-  // Render functie
+  // Render functie voor de reviews
   function renderReviews(reviews) {
     container.innerHTML = reviews.map(r => `
       <div class="review-card">
-        <div class="stars">${"★".repeat(Math.round(r.rating))}${"☆".repeat(5 - Math.round(r.rating))}</div>
+        <div class="stars">
+          ${"★".repeat(Math.round(r.rating))}
+          ${"☆".repeat(5 - Math.round(r.rating))}
+        </div>
         <p class="review-text">"${r.text || r.originalText?.text || "Geen tekst"}"</p>
         <small>- ${r.authorName || r.author}</small>
       </div>
