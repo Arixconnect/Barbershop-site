@@ -241,6 +241,26 @@ h2 {
   font-style: italic;
 }
 
+/* === VIP pakket speciaal stijlen === */
+#prijzen .price-row.vip {
+  border: 2px solid transparent;
+  border-image: linear-gradient(135deg, #ffffff, #bfbfbf, #999999, #e0e0e0) 1;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#prijzen .price-row.vip span {
+  color: #f5f5f5;
+}
+
+#prijzen .price-row.vip .note {
+  color: #dcdcdc;
+  font-style: italic;
+}
+
 /* ==== Gallery ==== */
 .gallery-grid {
   display: grid;
