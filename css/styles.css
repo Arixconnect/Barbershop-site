@@ -228,4 +228,11 @@ footer {
 .icon {
   filter: brightness(0) invert(1); /* maakt zwarte iconen wit */
 }
-
+/* ==== Iconen netjes schalen ==== */
+.icon {
+  filter: brightness(0) invert(1); /* blijft wit */
+  width: 40px;   /* pas aan naar wens: 32px, 36px, 40px */
+  height: auto;  /* behoudt de verhouding */
+  display: block;
+  margin: 0 auto; /* centreert icoon in de card */
+}
