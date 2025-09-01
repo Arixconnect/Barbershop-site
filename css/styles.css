@@ -231,7 +231,7 @@ footer {
 /* ==== Iconen netjes schalen ==== */
 .icon {
   filter: brightness(0) invert(1); /* blijft wit */
-  width: 40px;   /* pas aan naar wens: 32px, 36px, 40px */
+  width: 32px;   /* pas aan naar wens: 32px, 36px, 40px */
   height: auto;  /* behoudt de verhouding */
   display: block;
   margin: 0 auto; /* centreert icoon in de card */
@@ -243,9 +243,16 @@ footer {
   gap: 12px; /* ruimte tussen icoon en tekst */
 }
 
+.card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-direction: row-reverse; /* draait de volgorde om */
+}
+
 .card .icon {
   width: 36px;
   height: auto;
   filter: brightness(0) invert(1);
-  flex-shrink: 0; /* icoon krimpt niet */
+  flex-shrink: 0;
 }
