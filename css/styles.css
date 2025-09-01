@@ -310,6 +310,7 @@ h2 {
   gap: 20px;
 }
 
+/* ==== Review kaarten met animatie ==== */
 .review-card {
   background: rgba(0,0,0,0.65);
   border: 1px solid rgba(255,255,255,0.15);
@@ -318,12 +319,26 @@ h2 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.5);
   text-align: center;
   color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.review-card:hover {
+  transform: translateY(-6px) scale(1.02); /* zachte hover animatie */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+/* ==== Gouden sterren ==== */
 .review-card .stars {
-  font-size: 1.2rem;
-  color: #ccc;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #FFD700; /* goud */
+  margin-bottom: 12px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.review-card .stars:hover {
+  transform: scale(1.1); /* lichte vergroting */
+  color: #FFA500; /* warm goud bij hover */
 }
 
 .review-card .review-text {
