@@ -352,6 +352,67 @@ h2 {
   font-size: 0.9rem;
 }
 
+/* ==== Contact sectie ==== */
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Contact info groter dan openingstijden */
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.contact-block,
+.hours {
+  background: var(--card-bg);
+  border: 1px solid #333;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+/* Zorg dat titel en tekst mooi uitgelijnd zijn */
+.contact-block p,
+.contact-block a {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  color: #FFD700; /* goud accent */
+}
+
+/* Openingstijden lijst */
+.hours ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.95rem;
+}
+
+.hours li:last-child {
+  border-bottom: none;
+}
+
+/* ==== Mobiele weergave ==== */
+@media (max-width: 768px) {
+  .contact-wrap {
+    grid-template-columns: 1fr; /* Alles onder elkaar */
+  }
+
+  .contact-block,
+  .hours {
+    margin-bottom: 20px;
+  }
+}
+
 
 /* ==== Footer ==== */
 footer {
