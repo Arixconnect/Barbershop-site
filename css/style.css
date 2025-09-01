@@ -1,146 +1,98 @@
 /* ==== Donkere stijl Master Barbershop ==== */
+
 :root {
-  --ink: #f5f5f5; /* standaard tekstkleur = wit */
-  --bg: #111111;  /* achtergrond = bijna zwart */
-  --muted: #cccccc; /* subtiel grijs */
-  --card-bg: #1a1a1a; /* blokken donkergrijs */
-  --accent: linear-gradient(180deg, #ffffff, #cccccc 40%, #999999 60%, #e0e0e0); /* metallic/chrome */
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --ink: #f5f5f5;          /* standaard tekstkleur (wit) */
+  --bg: #111111;           /* bijna zwart */
+  --muted: #cccccc;        /* subtiel grijs */
+  --card-bg: #1a1a1a;      /* donkergrijs voor blokken */
+  --accent: linear-gradient(180deg, #ffffff, #bfbfbf 40%, #999999 60%, #e0e0e0); /* metallic/chrome */
+  --shadow: 0 8px 24px rgba(0,0,0,0.6);
   --radius: 12px;
 }
 
+/* Basis */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--ink);
-  margin: 0;
   line-height: 1.6;
 }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* ==== Navigatie ==== */
+/* Navigatie */
 header {
-  background: rgba(20, 20, 20, 0.95);
+  background: rgba(20,20,20,0.95);
   border-bottom: 1px solid #333;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  position: sticky; top: 0; z-index: 100;
 }
-
-.navbar-logo img {
-  height: 55px;
-}
-
-.navbar-links a {
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 500;
-}
-.navbar-links a:hover {
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+.brand img { height: 55px; width: auto; }
+.menu { display: flex; gap: 22px; }
+.menu a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.menu a:hover {
   background: var(--accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* ==== Hero ==== */
+/* Hero */
 .hero {
+  position: relative;
   min-height: 70vh;
   display: grid;
   place-items: center;
+  background: #000 url('../img/hero.jpg') center/cover no-repeat;
   color: #fff;
-  text-align: center;
 }
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  background: var(--accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero::after {
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.3), transparent);
 }
-.hero p {
-  color: #ddd;
-}
+.hero .inner { position: relative; z-index: 1; text-align: center; }
+.hero h1 { font-size: clamp(36px, 6vw, 64px); margin-bottom: 10px; }
+.hero p { color: #ddd; margin-bottom: 20px; }
 
-/* ==== Buttons ==== */
-.cta, .cta-black, .review-button {
+/* Knoppen */
+.cta, .cta-link, .review-button {
   display: inline-block;
   padding: 12px 22px;
-  border-radius: var(--radius);
-  border: 1px solid #999;
+  border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
+  border: 1px solid #999;
   background: var(--accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.cta:hover, .cta-black:hover, .review-button:hover {
-  border-color: #ccc;
+.cta:hover, .cta-link:hover, .review-button:hover {
   background: linear-gradient(180deg, #e0e0e0, #999999);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  border-color: #ccc;
 }
 
-/* ==== Secties ==== */
-section {
-  padding: 60px 0;
+/* Kaarten en blokken */
+.card, .price-row, .review, .contact-block, .hours {
+  background: var(--card-bg);
+  border: 1px solid #333;
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
 }
-h2, h3, .section-title {
+.card p, .price-row .note, .review small { color: var(--muted); }
+
+/* Titels */
+h1, h2, h3, .section-title {
   background: var(--accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* ==== Reviews ==== */
-.reviews-section {
-  background: #111;
-  text-align: center;
-}
-.review-card {
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  max-width: 400px;
-  margin: auto;
-}
-.stars {
-  font-size: 1.5rem;
-  color: #ccc;
-}
-.review-text {
-  font-style: italic;
-  color: var(--muted);
-}
-
-/* ==== Pricing ==== */
-.pricing-section {
-  background: #111;
-}
-.pricing-column {
-  background: var(--card-bg);
-  padding: 20px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.pricing-column h3 {
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
-}
-.pricing-column li {
-  display: flex;
-  justify-content: space-between;
-  padding: 6px 0;
-  border-bottom: 1px solid #333;
-}
-.vip {
-  background: var(--accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border: 2px solid #999;
-}
-
-/* ==== Galerie ==== */
+/* Galerij */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 .gallery-grid img {
@@ -148,30 +100,29 @@ h2, h3, .section-title {
   height: 260px;
   object-fit: cover;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform .3s ease;
 }
-.gallery-grid img:hover {
-  transform: scale(1.03);
-}
+.gallery-grid img:hover { transform: scale(1.03); }
 
-/* ==== Footer ==== */
+/* Reviews sectie */
+.reviews-section { padding: 60px 0; text-align: center; }
+
+/* Footer */
 footer {
   background: #111;
   color: var(--muted);
-  border-top: 1px solid #333;
   padding: 30px 0;
   text-align: center;
+  border-top: 1px solid #333;
 }
 .socials a {
   background: var(--card-bg);
   border: 1px solid #333;
   color: var(--ink);
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: grid;
-  place-items: center;
 }
 .socials a:hover {
   border-color: #999;
@@ -180,36 +131,10 @@ footer {
   -webkit-text-fill-color: transparent;
 }
 
-/* ==== Responsive ==== */
+/* Responsive */
 @media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-    background: #000;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    padding: 10px;
-  }
-  .navbar-links.active {
-    display: flex;
-  }
-  .hamburger {
-    display: block;
-    font-size: 24px;
-    color: #fff;
-    background: none;
-    border: none;
-  }
-  .pricing-grid {
-    flex-direction: column;
-  }
-  .gallery-grid {
-    grid-template-columns: 1fr;
-  }
-  .hero h1 {
-    font-size: 2rem;
-  }
+  .menu { display: none; flex-direction: column; background: #000; position: absolute; top: 60px; right: 0; width: 200px; }
+  .menu.active { display: flex; }
+  .hamburger { display: block; font-size: 24px; color: #fff; background: none; border: none; cursor: pointer; }
+  .gallery-grid { grid-template-columns: 1fr; }
 }
-
