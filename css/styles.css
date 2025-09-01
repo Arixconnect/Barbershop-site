@@ -291,11 +291,24 @@ footer {
   z-index: 1; /* zorgt dat tekst en inhoud boven overlay komt */
 }
 
-.pricing-column {
-  background: rgba(0, 0, 0, 0.7); /* semi-transparant blok voor betere leesbaarheid */
-  border-radius: 12px;
-  padding: 20px;
+section#prijzen {
+  position: relative !important;
+  padding: 60px 20px;
+  background: url('../img/marble-bg.jpg') center/cover no-repeat !important;
   color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+
+section#prijzen::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+section#prijzen .container {
+  position: relative;
+  z-index: 1;
 }
   
