@@ -248,19 +248,19 @@ h2 {
 }
 
 .gallery-grid img {
-
-  /* ==== Grotere foto's op desktop ==== */
-@media (min-width: 992px) {
-  .gallery-grid img {
-    height: 420px; /* meer hoogte voor desktop */
-  }
-}
   width: 100%;
-  height: 260px; /* iets hoger zodat kapsels beter in beeld zijn */
+  height: 260px; /* standaard hoogte (mobiel/tablet) */
   object-fit: cover;
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ==== Grotere foto's op desktop ==== */
+@media (min-width: 992px) {
+  .gallery-grid img {
+    height: 420px; /* meer hoogte voor desktop */
+  }
 }
 
 /* Focus helpers */
@@ -275,6 +275,7 @@ h2 {
 .focus-bottom {
   object-position: bottom;
 }
+
 
 /* ==== Reviews ==== */
 .reviews-section {
