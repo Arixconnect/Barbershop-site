@@ -1,10 +1,10 @@
 /* ==== Master Barbershop donkere stijl ==== */
 :root {
-  --ink: #f5f5f5; /* standaard tekst = wit */
-  --bg: #111111; /* bijna zwart */
-  --muted: #cccccc; /* lichtgrijs */
-  --card-bg: #1a1a1a; /* donkergrijs voor blokken */
-  --accent: linear-gradient(180deg, #ffffff, #bfbfbf 40%, #999999 60%, #e0e0e0); /* metallic/chrome */
+  --ink: #f5f5f5;
+  --bg: #111111;
+  --muted: #cccccc;
+  --card-bg: #1a1a1a;
+  --accent: linear-gradient(180deg, #ffffff, #bfbfbf 40%, #999999 60%, #e0e0e0);
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
   --radius: 16px;
 }
@@ -44,6 +44,7 @@ header {
   display: block;
 }
 
+/* Menu standaard desktop */
 .menu {
   display: flex;
   align-items: center;
@@ -60,6 +61,42 @@ header {
   background: var(--accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* CTA link */
+.cta-link {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #999;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+  border-color: #ccc;
+  background: linear-gradient(180deg, #e0e0e0, #999999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==== Hamburger knop ==== */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: var(--ink);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 101;
+  transition: transform 0.3s ease;
+}
+
+.hamburger.active {
+  transform: rotate(90deg); /* optioneel effect */
 }
 
 /* ==== Hero ==== */
@@ -138,7 +175,7 @@ h2 {
   -webkit-text-fill-color: transparent;
 }
 
-/* ==== Cards (diensten, reviews, contact) ==== */
+/* ==== Cards ==== */
 .card,
 .review,
 .contact-block,
@@ -152,7 +189,6 @@ h2 {
   margin-bottom: 18px;
 }
 
-/* ==== Iconen ==== */
 .icon {
   filter: brightness(0) invert(1);
   width: 32px;
@@ -160,7 +196,6 @@ h2 {
   flex-shrink: 0;
 }
 
-/* ==== Card layout ==== */
 .card {
   display: flex;
   align-items: center;
@@ -173,442 +208,46 @@ h2 {
   color: var(--muted);
 }
 
-/* === Prijslijst sectie === */
-#prijzen {
-  position: relative;
-  padding: 60px 20px;
-  background: url('../img/marble-bg.jpg') center/cover no-repeat fixed;
-  color: #fff;
-  overflow: hidden;
-}
-
-#prijzen::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 0;
-}
-
-#prijzen .container {
-  position: relative;
-  z-index: 1;
-}
-
-#prijzen h2 {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  background: var(--accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-#prijzen .price-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 12px;
-  padding: 16px 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  backdrop-filter: blur(3px);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-#prijzen .price-row:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
-}
-
-#prijzen .price-row .name {
-  font-weight: 500;
-  font-size: 1rem;
-  color: #fff;
-}
-
-#prijzen .price-row span:last-child {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #e0e0e0;
-}
-
-#prijzen .price-row .note {
-  font-size: 0.9rem;
-  color: #ccc;
-  font-style: italic;
-}
-
-#prijzen .price-row.vip {
-  border: 2px solid transparent;
-  border-image: linear-gradient(135deg, #ffffff, #bfbfbf, #999999, #e0e0e0) 1;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-#prijzen .price-row.vip span {
-  color: #f5f5f5;
-}
-
-#prijzen .price-row.vip .note {
-  color: #dcdcdc;
-  font-style: italic;
-}
-
-/* ==== Gallery ==== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* ==== Reviews sectie ==== */
-.reviews-section {
-  padding: 60px 20px;
-  background: url('../img/marble-bg.jpg') center/cover no-repeat fixed;
-  position: relative;
-  overflow: hidden;
-}
-
-.reviews-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 0;
-}
-
-.reviews-section .container {
-  position: relative;
-  z-index: 1;
-}
-
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.review-card {
-  background: rgba(0,0,0,0.65);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  text-align: center;
-  color: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.review-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
-}
-
-.review-card .stars {
-  font-size: 1.4rem;
-  color: #FFD700;
-  margin-bottom: 12px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-}
-
-.review-card .stars:hover {
-  transform: scale(1.1);
-  color: #FFA500;
-}
-
-.review-card .review-text {
-  font-style: italic;
-  margin-bottom: 12px;
-}
-
-.review-card small {
-  display: block;
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-/* ==== Contact sectie ==== */
-.contact-wrap {
-  padding: 60px 20px;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
-  gap: 30px;
-  align-items: start;
-}
-
-.contact-block,
-.hours,
-.map-embed {
-  background: var(--card-bg);
-  border: 1px solid #333;
-  border-radius: var(--radius);
-  padding: 20px;
-  box-shadow: var(--shadow);
-}
-
-.hours h3 {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
-.hours ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.hours li {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px dashed rgba(255,255,255,0.1);
-}
-
-.hours li:last-child {
-  border-bottom: none;
-}
-
-.contact-block p {
-  margin-bottom: 12px;
-  font-size: 1rem;
-}
-
-.contact-block a {
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.contact-block a:hover {
-  color: #FFD700;
-}
-
-/* Contact social icons */
-.contact-socials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.contact-socials a {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: var(--card-bg);
-  color: var(--ink);
-  border: 1px solid #333;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s ease, border-color 0.3s ease, background 0.3s ease;
-  font-size: 1.2rem;
-}
-
-.contact-socials a:hover {
-  transform: scale(1.1);
-  border-color: #999;
-  color: #FFD700;
-}
-
-.map-embed iframe {
-  width: 100%;
-  height: 250px;
-  border: none;
-  border-radius: 12px;
-}
-
-/* ==== Afspraak maken ==== */
-.booking-section {
-  padding: 70px 20px;
-  text-align: center;
-  background: url('../img/marble-bg.jpg') center/cover no-repeat fixed;
-  position: relative;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  margin: 50px auto;
-  max-width: 900px;
-}
-
-.booking-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  border-radius: var(--radius);
-}
-
-.booking-section h2 {
-  position: relative;
-  z-index: 1;
-  font-size: 2.4rem;
-  margin-bottom: 15px;
-  background: var(--accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.booking-subtext {
-  position: relative;
-  z-index: 1;
-  font-size: 1.2rem;
-  line-height: 1.7;
-  color: #ddd;
-  margin-bottom: 30px;
-}
-
-.booking-section .cta {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 999px;
-  background: var(--accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border: 1px solid #999;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.booking-section .cta:hover {
-  background: linear-gradient(180deg, #e0e0e0, #999999);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-color: #ccc;
-  transform: scale(1.05);
-}
-
-.booking-note {
-  position: relative;
-  z-index: 1;
-  margin-top: 25px;
-  font-size: 1rem;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-/* ==== Footer ==== */
-footer {
-  background: #111;
-  color: var(--muted);
-  text-align: center;
-  padding: 25px 15px;
-  border-top: 1px solid #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-footer .credits {
-  font-size: 0.85rem;
-  color: #888;
-}
-
-footer .credits a {
-  color: #888;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer .credits a:hover {
-  color: #FFD700;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.85rem;
-}
-
-footer .socials {
-  display: flex;
-  gap: 18px;
-  justify-content: center;
-  margin-top: 12px;
-}
-
-footer .socials a {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--card-bg);
-  color: var(--ink);
-  border: 1px solid #333;
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  font-size: 1.2rem;
-}
-
-footer .socials a:hover {
-  border-color: #999;
-  color: #FFD700;
-}
-
-/* ==== Responsive ==== */
-@media (max-width: 900px) {
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .contact-block, .hours, .map-embed { margin-bottom: 20px; }
-}
-
 /* ==== Mobiel navigatie menu ==== */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
   .menu {
-    flex-direction: column;   /* alles onder elkaar */
-    align-items: center;      /* centreren */
-    gap: 10px;
-    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+
+  .menu.active {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .menu a {
-    display: block;
+    font-size: 1.1rem;
+    padding: 10px 0;
     width: 100%;
     text-align: center;
-    font-size: 1.1rem;
-    padding: 10px;
   }
 
   .cta-link {
-    order: 99;          /* Boek nu altijd als laatste */
-    margin-top: 12px;
+    order: 99;
+    margin-top: 10px;
   }
 }
-
-@media (max-width: 560px) {
-  .gallery-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
-  .cta { padding: 10px 18px; font-size: 1rem; }
-}
-
-/* === Sectietitels consistent centreren === */
-section h2, 
-section .section-title {
-  text-align: center;
-}
-
