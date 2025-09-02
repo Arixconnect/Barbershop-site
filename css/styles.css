@@ -249,11 +249,24 @@ h2 {
 
 .gallery-grid img {
   width: 100%;
-  height: 240px;
+  height: 260px; /* iets hoger zodat kapsels beter in beeld zijn */
   object-fit: cover;
   border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focus helpers */
+.focus-top {
+  object-position: top;
+}
+
+.focus-center {
+  object-position: center;
+}
+
+.focus-bottom {
+  object-position: bottom;
 }
 
 /* ==== Reviews ==== */
