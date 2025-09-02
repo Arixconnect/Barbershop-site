@@ -13,12 +13,24 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.textContent = hamburger.classList.contains("active") ? "✖" : "☰";
   });
 
-  // Klik op link → sluit menu
+  // Sluit menu bij klik op link
   document.querySelectorAll(".menu a").forEach(link => {
     link.addEventListener("click", () => {
       menu.classList.remove("active");
       hamburger.classList.remove("active");
       hamburger.textContent = "☰";
+    });
+  });
+
+  // Dropdown toggle voor mobiel
+  document.querySelectorAll(".dropbtn").forEach(btn => {
+    btn.addEventListener("click", e => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        const dropdownContent = btn.nextElementSibling;
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
+      }
     });
   });
 });
