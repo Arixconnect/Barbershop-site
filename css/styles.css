@@ -459,7 +459,27 @@ h2 {
 }
 
 
-/* ==== Footer ==== */
+/* Afspraak maken netjes centreren */
+.appointment {
+  text-align: center;
+}
+
+.appointment p {
+  margin-bottom: 20px;
+}
+
+.appointment .cta {
+  display: inline-block;
+  margin: 15px 0;
+}
+
+.appointment .fineprint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+/* Footer */
 footer {
   background: #111;
   color: var(--muted);
@@ -468,9 +488,25 @@ footer {
   border-top: 1px solid #333;
 }
 
+footer .madeby {
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+}
+
+footer .madeby a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .madeby a:hover {
+  color: #FFD700;
+}
+
+/* Social icons */
 .socials {
   display: flex;
-  gap: 12px;
+  gap: 16px; /* extra ruimte tussen iconen */
   justify-content: center;
   margin-top: 12px;
 }
@@ -485,6 +521,7 @@ footer {
   color: var(--ink);
   border: 1px solid #333;
   box-shadow: var(--shadow);
+  transition: 0.3s;
 }
 
 .socials a:hover {
@@ -493,6 +530,7 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 /* ==== Responsive ==== */
 @media (max-width: 900px) {
