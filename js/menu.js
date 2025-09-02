@@ -4,16 +4,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!hamburger || !menu) return;
 
-  // Hamburger click
+  // Hamburger klik → menu openen/sluiten
   hamburger.addEventListener("click", () => {
     menu.classList.toggle("active");
     hamburger.classList.toggle("active");
 
-    // Toggle icoon ☰ ↔ ✖
+    // Wissel icoon ☰ ↔ ✖
     hamburger.textContent = hamburger.classList.contains("active") ? "✖" : "☰";
   });
 
-  // Sluit menu bij klik op link
+  // Klik op een link → menu sluiten
   document.querySelectorAll(".menu a").forEach(link => {
     link.addEventListener("click", () => {
       menu.classList.remove("active");
@@ -22,15 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Dropdown toggle voor mobiel
+  // Dropdown toggle (alleen mobiel)
   document.querySelectorAll(".dropbtn").forEach(btn => {
     btn.addEventListener("click", e => {
       if (window.innerWidth <= 768) {
         e.preventDefault();
-        const dropdownContent = btn.nextElementSibling;
-        dropdownContent.style.display =
-          dropdownContent.style.display === "block" ? "none" : "block";
+        const dropdown = btn.nextElementSibling;
+        dropdown.style.display =
+          dropdown.style.display === "block" ? "none" : "block";
       }
     });
   });
 });
+
