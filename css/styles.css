@@ -576,8 +576,30 @@ footer .socials a:hover {
   .contact-block, .hours, .map-embed { margin-bottom: 20px; }
 }
 
+/* ==== Mobiel navigatie menu ==== */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;   /* alles onder elkaar */
+    align-items: center;      /* centreren */
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  .cta-link {
+    order: 99;          /* Boek nu altijd als laatste */
+    margin-top: 12px;
+  }
+}
+
 @media (max-width: 560px) {
-  .menu { gap: 14px; }
   .gallery-grid { grid-template-columns: 1fr; }
   .hero h1 { font-size: 1.8rem; }
   .hero p { font-size: 1rem; }
@@ -588,23 +610,5 @@ footer .socials a:hover {
 section h2, 
 section .section-title {
   text-align: center;
-}
-/* ==== Responsive navigatie fix ==== */
-@media (max-width: 768px) {
-  .menu {
-    flex-wrap: wrap;   /* zorgt dat items afbreken ipv horizontaal scrollen */
-    gap: 12px;
-    justify-content: center; /* menu-items centreren */
-  }
-
-  .menu a {
-    font-size: 0.95rem;
-    padding: 8px 12px;
-  }
-
-  .cta-link {
-    order: 99;   /* Boek nu knop altijd als laatste */
-    margin-top: 8px;
-  }
 }
 
