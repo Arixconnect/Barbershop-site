@@ -589,4 +589,22 @@ section h2,
 section .section-title {
   text-align: center;
 }
+/* ==== Responsive navigatie fix ==== */
+@media (max-width: 768px) {
+  .menu {
+    flex-wrap: wrap;   /* zorgt dat items afbreken ipv horizontaal scrollen */
+    gap: 12px;
+    justify-content: center; /* menu-items centreren */
+  }
+
+  .menu a {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  .cta-link {
+    order: 99;   /* Boek nu knop altijd als laatste */
+    margin-top: 8px;
+  }
+}
 
