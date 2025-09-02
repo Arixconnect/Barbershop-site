@@ -17,23 +17,37 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="container nav">
-      <a href="#" class="brand" aria-label="Master Barbershop home">
-        <img src="img/logo.png" alt="Master Barbershop logo" />
-      </a>
-      <nav class="menu">
-        <a href="#diensten">Diensten</a>
-        <a href="#prijzen">Prijslijst</a>
-        <a href="#galerij">Galerij</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-        <a class="cta-link" href="https://masterbarbershoparnhem.setmore.com" target="_blank" rel="noopener">Boek nu</a>
-      </nav>
-    </div>
-  </header>
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const menu = document.querySelector('.menu');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script><body> 
+  
+<!-- Header -->
+<header>
+  <div class="container nav">
+    <a href="#" class="brand" aria-label="Master Barbershop home">
+      <img src="img/logo.png" alt="Master Barbershop logo" />
+    </a>
+
+    <!-- Hamburger knop (zichtbaar op mobiel) -->
+    <button class="hamburger" aria-label="Menu">☰</button>
+
+    <!-- Navigatie menu -->
+    <nav class="menu">
+      <a href="#diensten">Diensten</a>
+      <a href="#prijzen">Prijslijst</a>
+      <a href="#galerij">Galerij</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a class="cta-link" href="https://masterbarbershoparnhem.setmore.com" target="_blank" rel="noopener">Boek nu</a>
+    </nav>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section class="hero" role="banner" aria-label="Hero">
