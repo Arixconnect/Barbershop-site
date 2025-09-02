@@ -459,24 +459,58 @@ h2 {
 }
 
 
-/* Afspraak maken netjes centreren */
-.appointment {
+/* ==== Afspraak maken ==== */
+.booking-section {
+  padding: 60px 20px;
   text-align: center;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 40px auto;
+  max-width: 800px;
 }
 
-.appointment p {
+.booking-section h2 {
+  font-size: 2rem;
   margin-bottom: 20px;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.appointment .cta {
-  display: inline-block;
-  margin: 15px 0;
-}
-
-.appointment .fineprint {
-  font-size: 0.85rem;
+.booking-subtext {
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: var(--muted);
-  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.booking-section .cta {
+  display: inline-block;
+  padding: 14px 26px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid #999;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.booking-section .cta:hover {
+  background: linear-gradient(180deg, #e0e0e0, #999999);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: #ccc;
+}
+
+.booking-note {
+  margin-top: 25px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 /* Footer */
