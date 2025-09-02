@@ -417,17 +417,20 @@ footer {
   gap: 10px;
 }
 
-/* ==== Responsive ==== */
-@media (max-width: 900px) {
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-}
-
 @media (max-width: 768px) {
-  .hamburger { display: block; }
+  /* Hamburger zichtbaar */
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--ink);
+    cursor: pointer;
+  }
 
+  /* Menu standaard verborgen */
   .menu {
-    display: flex;
+    display: none; /* <<< HIER zit de fix */
     flex-direction: column;
     align-items: center;
     gap: 15px;
@@ -439,11 +442,14 @@ footer {
     transition: max-height 0.4s ease, opacity 0.3s ease;
   }
 
+  /* Actief menu zichtbaar */
   .menu.active {
-    max-height: 500px; /* genoeg ruimte */
+    display: flex; /* <<< HIER zit de fix */
+    max-height: 500px;
     opacity: 1;
   }
 
+  /* Menu links */
   .menu a {
     font-size: 1.1rem;
     padding: 10px;
@@ -453,10 +459,18 @@ footer {
     order: 99;
     margin-top: 12px;
   }
-}
 
-@media (max-width: 560px) {
-  .gallery-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 1.8rem; }
-  .hero p { font-size: 1rem; }
+  /* Dropdown styling mobiel */
+  .dropdown-content {
+    position: static;
+    min-width: 100%;
+    border: none;
+    box-shadow: none;
+    background: #111;
+  }
+
+  .dropdown-content a {
+    padding: 12px;
+    border-top: 1px solid #333;
+  }
 }
