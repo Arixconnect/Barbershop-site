@@ -19,19 +19,30 @@
 </head>
 <body> 
   
-<!-- Header -->
 <header>
   <div class="container nav">
+    <!-- Logo -->
     <a href="#" class="brand" aria-label="Master Barbershop home">
       <img src="img/logo.png" alt="Master Barbershop logo" />
     </a>
 
-    <!-- Hamburger knop (zichtbaar op mobiel) -->
+    <!-- Hamburger knop (rechts) -->
     <button class="hamburger" aria-label="Menu">☰</button>
 
     <!-- Navigatie menu -->
     <nav class="menu">
-      <a href="#diensten">Diensten</a>
+      <a href="#home">Home</a>
+
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">Diensten ▾</button>
+        <div class="dropdown-content">
+          <a href="#knippen">Knippen</a>
+          <a href="#baard">Baard modelleren</a>
+          <a href="#vip">VIP Pakket</a>
+        </div>
+      </div>
+
       <a href="#prijzen">Prijslijst</a>
       <a href="#galerij">Galerij</a>
       <a href="#reviews">Reviews</a>
