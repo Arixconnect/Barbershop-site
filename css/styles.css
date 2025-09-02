@@ -494,3 +494,22 @@ footer {
     border-top: 1px solid #333;
   }
 }
+/* ==== Contact responsive ==== */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* alles onder elkaar */
+    gap: 20px;
+    text-align: center;
+  }
+
+  .hours li {
+    justify-content: center; /* dag + tijd gecentreerd */
+    gap: 15px; /* ruimte tussen dag en tijd */
+  }
+
+  .map-embed iframe {
+    width: 100%;   /* kaart vult hele breedte */
+    height: 300px; /* vaste hoogte op mobiel */
+  }
+}
+
