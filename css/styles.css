@@ -417,6 +417,25 @@ footer {
   gap: 10px;
 }
 
+/* Navigatie standaard (desktop) */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @media (max-width: 768px) {
   /* Hamburger zichtbaar */
   .hamburger {
