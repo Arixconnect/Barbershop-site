@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Favicon en App Icons -->
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
@@ -34,7 +34,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
   <div class="container nav">
     <!-- Logo -->
-    <a href="#" class="brand" aria-label="Master Barbershop home">
+    <a href="#home" class="brand" aria-label="Master Barbershop home">
       <img src="img/logo.png" alt="Master Barbershop logo" />
     </a>
 
@@ -47,10 +47,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- Dropdown -->
       <div class="dropdown">
-        <button class="dropbtn">Diensten ▾</button>
+        <button class="dropbtn" type="button" onclick="window.location.hash='diensten'">Diensten ▾</button>
         <div class="dropdown-content">
           <a href="#knippen">Knippen</a>
-          <a href="#baard">Baard modelleren</a>
+          <a href="#baard-prijs">Baard modelleren</a>
           <a href="#vip">VIP Pakket</a>
         </div>
       </div>
@@ -66,7 +66,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
   <!-- Hero -->
-  <section class="hero" role="banner" aria-label="Hero">
+  <section id="home" class="hero" role="banner" aria-label="Hero">
     <div class="inner container">
       <h1>Master Barbershop Arnhem</h1>
       <p>— Vakmanschap met oog voor detail.</p>
@@ -79,7 +79,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="container">
       <h2>Diensten</h2>
       <div class="services">
-        <div class="card">
+        <div class="card" id="knippen">
           <img src="img/icon_scissors.png" alt="" class="icon" loading="lazy">
           <h3>Knippen</h3>
           <p>Moderne en klassieke coupes, strak afgewerkt.</p>
@@ -106,14 +106,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="price-row"><span class="name">Volwassenen Knippen</span><span>€25</span></div>
         <div class="price-row"><span class="name">Volwassenen Knippen + Baard</span><span>€35</span></div>
         <div class="price-row"><span class="name">Contouren</span><span>€10</span></div>
-        <div class="price-row"><span class="name">Baard modelleren</span><span>€17.50</span></div>
+        <div class="price-row" id="baard-prijs"><span class="name">Baard modelleren</span><span>€17.50</span></div>
         <div class="price-row"><span class="name">Knippen kinderen t/m 15 jaar</span><span>€15</span></div>
         <div class="price-row"><span class="name">Kinderen opscheer / overloop t/m 15 jaar</span><span>€20</span></div>
         <div class="price-row"><span class="name">Gezichtsbehandeling</span><span>€30</span></div>
         <div class="price-row"><span class="name">Touw epileren</span><span>€12,50</span></div>
         <div class="price-row"><span class="name">Harsen (oor/neus/gezicht)</span><span>€15</span></div>
         <div class="price-row"><span class="name">Wassen &amp; hoofdmassage</span><span>€7,50</span></div>
-        <div class="price-row vip"><span class="name">VIP Pakket</span><span class="note">€60</span></div>
+        <div class="price-row vip" id="vip"><span class="name">VIP Pakket</span><span class="note">€60</span></div>
       </div>
     </div>
   </section>
