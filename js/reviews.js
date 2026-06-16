@@ -33,7 +33,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const getReviewAuthor = review => review.authorAttribution?.displayName || review.authorName || "Google review";
 
   const renderGoogleReviews = place => {
-    const reviews = Array.isArray(place.reviews) ? place.reviews.slice(0, 3) : [];
+    const reviews = Array.isArray(place.reviews)
+      ? [...place.reviews]
+        .sort((a, b) => new Date(b.publishTime || 0) - new Date(a.publishTime || 0))
+        .slice(0, 3)
+      : [];
     const totalReviews = place.userRatingCount || "190+";
     const rating = place.rating || 5;
 
