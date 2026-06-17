@@ -198,7 +198,7 @@ h2 {
 .card,
 .review,
 .contact-block,
-.hours {
+hours {
   background-color: var(--card-bg);
   border: 1px solid #333;
   border-radius: var(--radius);
@@ -437,6 +437,26 @@ footer {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.menu .cta-link {
+  background: linear-gradient(180deg, #ffffff, #d8d8d8 45%, #9f9f9f 100%);
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #111;
+  color: #111;
+  border: 1px solid rgba(255,255,255,0.8);
+  box-shadow: 0 0 14px rgba(255,255,255,0.18), 0 6px 18px rgba(0,0,0,0.45);
+  padding: 10px 20px;
+}
+
+.menu .cta-link:hover {
+  background: linear-gradient(180deg, #ffffff, #eeeeee 45%, #bdbdbd 100%);
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #000;
+  color: #000;
+  border-color: #fff;
+  box-shadow: 0 0 18px rgba(255,255,255,0.28), 0 8px 22px rgba(0,0,0,0.55);
+  transform: translateY(-1px);
+}
 @media (max-width: 768px) {
   /* Hamburger zichtbaar */
   .hamburger {
@@ -478,6 +498,8 @@ footer {
   .cta-link {
     order: 99;
     margin-top: 12px;
+    min-width: 180px;
+    text-align: center;
   }
 
   /* Dropdown styling mobiel */
@@ -512,4 +534,3 @@ footer {
     height: 300px; /* vaste hoogte op mobiel */
   }
 }
-
