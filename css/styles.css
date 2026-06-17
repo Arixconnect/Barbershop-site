@@ -195,10 +195,10 @@ header {
 
 .cta:hover,
 .cta-link:hover {
-  background: #000000;
-  color: #ffffff;
+  background: linear-gradient(180deg, #ffffff, #d9d9d9 42%, #a7a7a7 100%);
+  color: #111111;
   -webkit-background-clip: border-box;
-  -webkit-text-fill-color: #ffffff;
+  -webkit-text-fill-color: #111111;
   border-color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 0 28px rgba(177, 18, 38, 0.85), 0 10px 26px rgba(0,0,0,0.55);
@@ -483,10 +483,10 @@ footer {
 }
 
 .menu .cta-link:hover {
-  background: #000000;
+  background: linear-gradient(180deg, #ffffff, #d9d9d9 42%, #a7a7a7 100%);
   -webkit-background-clip: border-box;
-  -webkit-text-fill-color: #ffffff;
-  color: #ffffff;
+  -webkit-text-fill-color: #111111;
+  color: #111111;
   border-color: #ffffff;
   box-shadow: 0 0 28px rgba(177, 18, 38, 0.85), 0 10px 26px rgba(0,0,0,0.55);
   transform: translateY(-2px);
