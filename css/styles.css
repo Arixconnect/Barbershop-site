@@ -156,8 +156,6 @@ header {
 }
 
 /* ==== CTA Buttons ==== */
-.cta,
-.cta-link,
 .review-button {
   display: inline-block;
   padding: 12px 22px;
@@ -171,13 +169,49 @@ header {
   transition: all 0.3s ease;
 }
 
-.cta:hover,
-.cta-link:hover,
 .review-button:hover {
   background: linear-gradient(180deg, #e0e0e0, #999999);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-color: #ccc;
+}
+
+.cta,
+.cta-link {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  background: #111111;
+  color: #ffffff;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #ffffff;
+  border: 2px solid #d9d9d9;
+  box-shadow: 0 0 18px rgba(177, 18, 38, 0.55), 0 8px 22px rgba(0,0,0,0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  animation: ctaPulse 7s ease-in-out infinite;
+}
+
+.cta:hover,
+.cta-link:hover {
+  background: #000000;
+  color: #ffffff;
+  -webkit-background-clip: border-box;
+  -webkit-text-fill-color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(177, 18, 38, 0.85), 0 10px 26px rgba(0,0,0,0.55);
+}
+
+@keyframes ctaPulse {
+  0%, 78%, 100% {
+    box-shadow: 0 0 18px rgba(177, 18, 38, 0.55), 0 8px 22px rgba(0,0,0,0.45);
+  }
+
+  88% {
+    box-shadow: 0 0 26px rgba(177, 18, 38, 0.75), 0 8px 22px rgba(0,0,0,0.45);
+  }
 }
 
 /* ==== Secties ==== */
@@ -439,23 +473,23 @@ footer {
 }
 
 .menu .cta-link {
-  background: linear-gradient(180deg, #ffffff, #d8d8d8 45%, #9f9f9f 100%);
+  background: #111111;
   -webkit-background-clip: border-box;
-  -webkit-text-fill-color: #111;
-  color: #111;
-  border: 1px solid rgba(255,255,255,0.8);
-  box-shadow: 0 0 14px rgba(255,255,255,0.18), 0 6px 18px rgba(0,0,0,0.45);
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+  border: 2px solid #d9d9d9;
+  box-shadow: 0 0 18px rgba(177, 18, 38, 0.55), 0 8px 22px rgba(0,0,0,0.45);
   padding: 10px 20px;
 }
 
 .menu .cta-link:hover {
-  background: linear-gradient(180deg, #ffffff, #eeeeee 45%, #bdbdbd 100%);
+  background: #000000;
   -webkit-background-clip: border-box;
-  -webkit-text-fill-color: #000;
-  color: #000;
-  border-color: #fff;
-  box-shadow: 0 0 18px rgba(255,255,255,0.28), 0 8px 22px rgba(0,0,0,0.55);
-  transform: translateY(-1px);
+  -webkit-text-fill-color: #ffffff;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 0 28px rgba(177, 18, 38, 0.85), 0 10px 26px rgba(0,0,0,0.55);
+  transform: translateY(-2px);
 }
 @media (max-width: 768px) {
   /* Hamburger zichtbaar */
@@ -497,8 +531,10 @@ footer {
 
   .cta-link {
     order: 99;
-    margin-top: 12px;
-    min-width: 180px;
+    width: calc(100% - 40px);
+    max-width: 320px;
+    margin: 16px auto 10px;
+    padding: 14px 22px;
     text-align: center;
   }
 
