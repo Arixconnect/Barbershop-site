@@ -54,4 +54,28 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  const floatingBookingButton = document.querySelector(".floating-booking-cta");
+
+  if (floatingBookingButton) {
+    let ticking = false;
+
+    const updateFloatingBookingButton = () => {
+      const showAfter = window.innerHeight * 2;
+      const shouldShow = window.scrollY >= showAfter;
+
+      floatingBookingButton.classList.toggle("is-visible", shouldShow);
+      ticking = false;
+    };
+
+    const requestButtonUpdate = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(updateFloatingBookingButton);
+    };
+
+    updateFloatingBookingButton();
+    window.addEventListener("scroll", requestButtonUpdate, { passive: true });
+    window.addEventListener("resize", requestButtonUpdate);
+  }
 });
