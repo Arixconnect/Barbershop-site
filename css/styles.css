@@ -5,6 +5,9 @@
   --muted: #cccccc;
   --card-bg: #1a1a1a;
   --accent: linear-gradient(180deg, #ffffff, #bfbfbf 40%, #999999 60%, #e0e0e0);
+  --gold: #d6b35a;
+  --gold-light: #f4df9b;
+  --gold-dark: #a97d22;
   --shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
   --radius: 16px;
 }
@@ -183,34 +186,74 @@ header {
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
-  background: #111111;
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 48%, #c29332 100%);
+  color: #111111;
   -webkit-background-clip: border-box;
-  -webkit-text-fill-color: #ffffff;
-  border: 2px solid #d9d9d9;
-  box-shadow: 0 0 18px rgba(177, 18, 38, 0.55), 0 8px 22px rgba(0,0,0,0.45);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  -webkit-text-fill-color: #111111;
+  border: 2px solid var(--gold-light);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.16) inset, 0 0 20px rgba(214,179,90,0.38), 0 8px 22px rgba(0,0,0,0.45);
+  letter-spacing: 0.01em;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
   animation: ctaPulse 7s ease-in-out infinite;
 }
 
 .cta:hover,
 .cta-link:hover {
-  background: linear-gradient(180deg, #ffffff, #d9d9d9 42%, #a7a7a7 100%);
-  color: #111111;
+  background: #111111;
+  color: var(--gold-light);
   -webkit-background-clip: border-box;
-  -webkit-text-fill-color: #111111;
+  -webkit-text-fill-color: var(--gold-light);
+  border-color: var(--gold);
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 0 28px rgba(214,179,90,0.58), 0 12px 28px rgba(0,0,0,0.55);
+}
+
+.cta:focus-visible,
+.cta-link:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(214,179,90,0.45), 0 10px 26px rgba(0,0,0,0.55);
+}
+
+.cta:active,
+.cta-link:active {
+  transform: translateY(0);
+}
+
+/* Primaire actie in de hero: duidelijker dan de compacte navigatieknop */
+.hero .cta {
+  min-width: 210px;
+  padding: 15px 30px;
+  font-size: 1.08rem;
   border-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 0 28px rgba(177, 18, 38, 0.85), 0 10px 26px rgba(0,0,0,0.55);
+  box-shadow: 0 0 0 2px var(--gold) inset, 0 0 26px rgba(214,179,90,0.52), 0 12px 30px rgba(0,0,0,0.58);
+}
+
+.hero .cta::after {
+  content: " →";
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 0.25s ease;
+}
+
+.hero .cta:hover::after {
+  transform: translateX(4px);
 }
 
 @keyframes ctaPulse {
   0%, 78%, 100% {
-    box-shadow: 0 0 18px rgba(177, 18, 38, 0.55), 0 8px 22px rgba(0,0,0,0.45);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.16) inset, 0 0 20px rgba(214,179,90,0.38), 0 8px 22px rgba(0,0,0,0.45);
   }
 
   88% {
-    box-shadow: 0 0 26px rgba(177, 18, 38, 0.75), 0 8px 22px rgba(0,0,0,0.45);
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.2) inset, 0 0 30px rgba(214,179,90,0.62), 0 8px 22px rgba(0,0,0,0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta,
+  .cta-link {
+    animation: none;
   }
 }
 
@@ -473,23 +516,23 @@ footer {
 }
 
 .menu .cta-link {
-  background: #111111;
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 48%, #c29332 100%);
   -webkit-background-clip: border-box;
-  -webkit-text-fill-color: #ffffff;
-  color: #ffffff;
-  border: 2px solid #d9d9d9;
-  box-shadow: 0 0 18px rgba(177, 18, 38, 0.55), 0 8px 22px rgba(0,0,0,0.45);
+  -webkit-text-fill-color: #111111;
+  color: #111111;
+  border: 2px solid var(--gold-light);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.16) inset, 0 0 20px rgba(214,179,90,0.38), 0 8px 22px rgba(0,0,0,0.45);
   padding: 10px 20px;
 }
 
 .menu .cta-link:hover {
-  background: linear-gradient(180deg, #ffffff, #d9d9d9 42%, #a7a7a7 100%);
+  background: #111111;
   -webkit-background-clip: border-box;
-  -webkit-text-fill-color: #111111;
-  color: #111111;
-  border-color: #ffffff;
-  box-shadow: 0 0 28px rgba(177, 18, 38, 0.85), 0 10px 26px rgba(0,0,0,0.55);
-  transform: translateY(-2px);
+  -webkit-text-fill-color: var(--gold-light);
+  color: var(--gold-light);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 0 28px rgba(214,179,90,0.58), 0 12px 28px rgba(0,0,0,0.55);
+  transform: translateY(-3px);
 }
 @media (max-width: 768px) {
   /* Hamburger zichtbaar */
