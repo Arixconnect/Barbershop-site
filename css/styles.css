@@ -573,6 +573,51 @@ footer {
   box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 0 28px rgba(214,179,90,0.58), 0 12px 28px rgba(0,0,0,0.55);
   transform: translateY(-3px);
 }
+
+/* Vaste boekingsprikkel na twee schermhoogtes scrollen */
+.floating-booking-cta {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 154px;
+  padding: 14px 24px;
+  border: 1px solid rgba(255,255,255,0.88);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #fff3c7 0%, #dfbd65 40%, #bd8d2e 75%, #ecd383 100%);
+  color: #111111;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  text-decoration: none;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset, 0 12px 30px rgba(0,0,0,0.55), 0 0 18px rgba(214,179,90,0.3);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(20px) scale(0.96);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, box-shadow 0.25s ease;
+}
+
+.floating-booking-cta.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.floating-booking-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.7) inset, 0 16px 34px rgba(0,0,0,0.6), 0 0 24px rgba(214,179,90,0.44);
+}
+
+.floating-booking-cta:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
 @media (max-width: 768px) {
   /* Hamburger zichtbaar */
   .hamburger {
@@ -618,6 +663,14 @@ footer {
     margin: 16px auto 10px;
     padding: 14px 22px;
     text-align: center;
+  }
+
+  .floating-booking-cta {
+    right: 16px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    left: 16px;
+    width: auto;
+    min-height: 52px;
   }
 
   /* Dropdown styling mobiel */
