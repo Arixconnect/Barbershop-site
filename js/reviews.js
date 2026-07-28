@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!container) return;
 
   const placeId = "ChIJ61dQgK6j4AR4GeTYWZsKkWw";
-  const googleReviewsUrl = `https://search.google.com/local/reviews?placeid=${placeId}`;
+  const googleReviewsUrl = "https://www.google.com/search?q=Master+Barbershop+Arnhem+reviews";
   const apiKey = window.GOOGLE_API_KEY || "";
 
   const escapeHTML = value => String(value || "")
