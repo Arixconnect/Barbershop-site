@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return "★".repeat(rounded) + "☆".repeat(5 - rounded);
   };
 
-  const renderReviewSummary = ({ rating = 5, totalReviews = "190+" } = {}) => {
+  const renderReviewSummary = ({ rating = 5, totalReviews = "200+" } = {}) => {
     container.innerHTML = `
       <div class="review-card">
         <div class="stars">${stars(rating)}</div>
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         .sort((a, b) => new Date(b.publishTime || 0) - new Date(a.publishTime || 0))
         .slice(0, 3)
       : [];
-    const totalReviews = place.userRatingCount || "190+";
+    const totalReviews = place.userRatingCount || "200+";
     const rating = place.rating || 5;
 
     const summaryCard = `
