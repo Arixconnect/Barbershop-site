@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Master Barbershop – Arnhem</title>
   <meta name="description" content="Master Barbershop – Exclusieve knip- en scheerbehandelingen in Arnhem. Zwart, wit en chroom huisstijl.">
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5H84FHRH');</script>
-<!-- End Google Tag Manager -->
+  <!-- Privacy-first consent: laadt GTM pas na toestemming -->
+  <script src="js/consent.js?v=20260828" defer></script>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,13 +18,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=20260828">
 </head>
-<body> 
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H84FHRH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body>
   
 <header>
   <div class="container nav">
@@ -139,14 +130,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
 <!-- Contact -->
-<section id="contact">
+<section id="contact" class="contact-section">
   <div class="container contact-wrap">
-    <h2>Contact</h2>
+    <div class="section-heading">
+      <span class="eyebrow">Kom langs in Arnhem</span>
+      <h2>Contact &amp; openingstijden</h2>
+      <p>Een strakke coupe begint met een goed moment in de stoel.</p>
+    </div>
     <div class="contact-grid">
-      
-      <!-- Openingstijden -->
-      <aside class="hours" aria-label="Openingstijden">
-        <h3>Openingstijden</h3>
+      <aside class="hours contact-panel" aria-label="Openingstijden">
+        <div class="panel-heading"><span aria-hidden="true">◷</span><h3>Openingstijden</h3></div>
         <ul>
           <li><span>Maandag</span><span>12:00 – 19:00</span></li>
           <li><span>Dinsdag</span><span>10:00 – 19:00</span></li>
@@ -158,13 +151,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
       </aside>
 
-      <!-- Contactgegevens -->
-      <div class="contact-block">
-        <p><strong>Adres:</strong> Middachtensingel 145, 6825 HK Arnhem</p>
-        <p><strong>Telefoon:</strong> <a href="tel:+31626463142">0626463142</a></p>
-        <p><strong>E-mail:</strong> <a href="mailto:masterbarbershoparnhem@gmail.com">masterbarbershoparnhem@gmail.com</a></p>
-        
-        <!-- Social media icoontjes -->
+      <div class="contact-block contact-panel">
+        <div class="panel-heading"><span aria-hidden="true">✦</span><h3>Master Barbershop</h3></div>
+        <a class="contact-detail" href="https://www.google.com/maps/search/?api=1&amp;query=Middachtensingel+145+Arnhem" target="_blank" rel="noopener">
+          <span aria-hidden="true">⌖</span><span><small>Adres</small>Middachtensingel 145<br>6825 HK Arnhem</span>
+        </a>
+        <a class="contact-detail" href="tel:+31626463142">
+          <span aria-hidden="true">☎</span><span><small>Bel ons</small>06 264 631 42</span>
+        </a>
+        <a class="contact-detail" href="mailto:masterbarbershoparnhem@gmail.com">
+          <span aria-hidden="true">✉</span><span><small>E-mail</small>masterbarbershoparnhem@gmail.com</span>
+        </a>
+        <a class="contact-book" href="https://masterbarbershoparnhem.setmore.com" target="_blank" rel="noopener">Plan je afspraak <span aria-hidden="true">→</span></a>
         <div class="contact-socials">
           <a href="https://www.instagram.com/masterbarbershop_arnhem/" target="_blank" aria-label="Instagram">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -181,36 +179,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- Maps -->
-      <div class="map-embed">
+      <div class="map-embed contact-panel">
         <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps?q=Middachtensingel+145,+6825+HK+Arnhem&output=embed"
+          data-consent-src="https://www.google.com/maps?q=Middachtensingel+145,+6825+HK+Arnhem&amp;output=embed"
           aria-label="Kaart van Master Barbershop in Arnhem">
         </iframe>
+        <div class="map-consent-placeholder">
+          <span aria-hidden="true">⌖</span>
+          <strong>Google Maps is geblokkeerd</strong>
+          <p>Sta marketingcookies toe om de interactieve kaart te laden.</p>
+          <button class="cookie-settings-trigger" type="button">Cookie-instellingen</button>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Footer -->
-<footer>
-  <div class="credits">
-    Designed by <a href="https://bio.site/arixmarketing" target="_blank">Arix Marketing</a>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="img/logo.png" alt="Master Barbershop Arnhem">
+      <p>Vakmanschap, precisie en persoonlijke aandacht in Arnhem.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Ontdek</h3>
+      <a href="#diensten">Diensten</a><a href="#prijzen">Prijslijst</a><a href="#galerij">Galerij</a><a href="#reviews">Reviews</a>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <a href="tel:+31626463142">06 264 631 42</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Middachtensingel+145+Arnhem" target="_blank" rel="noopener">Middachtensingel 145, Arnhem</a>
+      <div class="footer-socials"><a href="https://www.instagram.com/masterbarbershop_arnhem/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@masterbarbershop_arnhem0" target="_blank" rel="noopener">TikTok</a></div>
+    </div>
   </div>
-  <p>© 2025 Master Barbershop. Alle rechten voorbehouden.</p>
-  <div class="socials">
-    <a href="https://www.instagram.com/masterbarbershop_arnhem/" target="_blank" aria-label="Instagram">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-        <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor"/>
-        <circle cx="12" cy="12" r="4" stroke="currentColor"/>
-        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
-      </svg>
-    </a>
-    <a href="https://www.tiktok.com/@masterbarbershop_arnhem0" target="_blank" aria-label="TikTok">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12.75 2c.66 0 1.2.54 1.2 1.2v.63c0 2.03 1.65 3.68 3.68 3.68h.63c.66 0 1.2.54 1.2 1.2v1.8a.6.6 0 0 1-.9.52 6.47 6.47 0 0 1-3.31-.9v6.4a5.4 5.4 0 1 1-5.4-5.4c.42 0 .84.06 1.2.18v2.16a2.7 2.7 0 1 0 1.8 2.52V3.2c0-.66.54-1.2 1.2-1.2z"/>
-      </svg>
-    </a>
+  <div class="container footer-bottom">
+    <p>© 2026 Master Barbershop. Alle rechten voorbehouden.</p>
+    <div><button class="cookie-settings-trigger" type="button">Cookie-instellingen</button><span>Designed by <a href="https://bio.site/arixmarketing" target="_blank" rel="noopener">Arix Marketing</a></span></div>
   </div>
 </footer>
 
@@ -224,14 +229,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     Boek nu <span aria-hidden="true">→</span>
   </a>
 
+  <div class="anniversary-modal" id="anniversary-modal" role="dialog" aria-modal="true" aria-labelledby="anniversary-title" hidden>
+    <canvas class="fireworks-canvas" aria-hidden="true"></canvas>
+    <div class="anniversary-card">
+      <button class="anniversary-close" type="button" aria-label="Jubileummelding sluiten">×</button>
+      <span class="anniversary-kicker">1 jaar Master Barbershop</span>
+      <div class="anniversary-emblem" aria-hidden="true">1</div>
+      <h2 id="anniversary-title">Bedankt voor jullie support!</h2>
+      <p>Al één jaar mogen we Arnhem voorzien van strakke coupes, verzorgde baarden en mooie momenten. Dit jubileum is dankzij jullie.</p>
+      <a href="https://masterbarbershoparnhem.setmore.com" target="_blank" rel="noopener">Vier het met een frisse coupe <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+
+  <section class="cookie-consent" id="cookie-consent" role="dialog" aria-modal="true" aria-labelledby="cookie-title" hidden>
+    <div class="cookie-consent-inner">
+      <div class="cookie-copy">
+        <span class="cookie-kicker">Privacy &amp; cookies</span>
+        <h2 id="cookie-title">Jouw privacy, jouw keuze</h2>
+        <p>We gebruiken noodzakelijke opslag om de website te laten werken. Met jouw toestemming gebruiken we ook Google Analytics voor inzicht en marketingtechnologie voor toekomstige Meta- en TikTok-campagnes.</p>
+      </div>
+      <div class="cookie-preferences" id="cookie-preferences" hidden>
+        <div class="cookie-option"><div><strong>Noodzakelijk</strong><small>Onmisbaar voor beveiliging en het onthouden van je keuze.</small></div><span class="always-on">Altijd actief</span></div>
+        <label class="cookie-option"><div><strong>Analytics</strong><small>Helpt ons anoniem te begrijpen hoe de website wordt gebruikt.</small></div><input id="consent-analytics" type="checkbox"><span class="toggle" aria-hidden="true"></span></label>
+        <label class="cookie-option"><div><strong>Marketing</strong><small>Voor campagne-metingen en relevante advertenties via Meta en TikTok.</small></div><input id="consent-marketing" type="checkbox"><span class="toggle" aria-hidden="true"></span></label>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-button secondary" id="cookie-reject" type="button">Alles weigeren</button>
+        <button class="cookie-button text-button" id="cookie-customize" type="button" aria-expanded="false">Voorkeuren</button>
+        <button class="cookie-button primary" id="cookie-accept" type="button">Alles accepteren</button>
+        <button class="cookie-button primary cookie-save" id="cookie-save" type="button" hidden>Keuze opslaan</button>
+      </div>
+      <p class="cookie-note">Je kunt je keuze altijd wijzigen via “Cookie-instellingen” onderaan de pagina.</p>
+    </div>
+  </section>
+
   
   <!-- Reviews API config -->
   <script src="js/config.js"></script>
 
   <!-- Reviews script -->
-  <script src="js/reviews.js"></script>
+  <script src="js/reviews.js?v=20260828"></script>
 
   <!-- Menu script -->
-  <script src="js/menu.js"></script>
+  <script src="js/menu.js?v=20260828"></script>
+
+  <!-- Tijdelijke jubileumcampagne -->
+  <script src="js/anniversary.js?v=20260828"></script>
 </body>
 </html>
