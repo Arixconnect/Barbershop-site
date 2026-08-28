@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     container.innerHTML = `
       <div class="review-card">
         <div class="stars">${stars(rating)}</div>
-        <p class="review-text">Meer dan ${escapeHTML(totalReviews)} klanten beoordelen Master Barbershop via Google.</p>
+        <p class="review-text">${escapeHTML(totalReviews)} klanten beoordelen Master Barbershop via Google.</p>
         <small>Google reviews</small>
         <a class="review-button" href="${googleReviewsUrl}" target="_blank" rel="noopener">Bekijk alle reviews</a>
       </div>
