@@ -59,10 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (floatingBookingButton) {
     let ticking = false;
+    const footer = document.querySelector(".site-footer");
 
     const updateFloatingBookingButton = () => {
       const showAfter = window.innerHeight * 2;
-      const shouldShow = window.scrollY >= showAfter;
+      const footerIsVisible = footer && footer.getBoundingClientRect().top < window.innerHeight - 16;
+      const shouldShow = window.scrollY >= showAfter && !footerIsVisible;
 
       floatingBookingButton.classList.toggle("is-visible", shouldShow);
       ticking = false;
@@ -77,5 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateFloatingBookingButton();
     window.addEventListener("scroll", requestButtonUpdate, { passive: true });
     window.addEventListener("resize", requestButtonUpdate);
+    window.addEventListener("load", requestButtonUpdate, { once: true });
+    window.setTimeout(requestButtonUpdate, 250);
   }
 });
