@@ -333,6 +333,54 @@ h2 {
   flex-shrink: 0;
 }
 
+/* Diensten: gelijke kaarten met een rustig, gecentreerd focuspunt */
+#diensten .services {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+#diensten .card {
+  display: flex;
+  min-height: 220px;
+  margin-bottom: 0;
+  padding: 32px 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#diensten .card .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+#diensten .card h3 {
+  margin-bottom: 8px;
+}
+
+#diensten .card p {
+  max-width: 290px;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  #diensten .services {
+    grid-template-columns: 1fr;
+    width: min(100%, 520px);
+  }
+
+  #diensten .card {
+    min-height: 180px;
+  }
+}
+
 /* ==== Prijslijst ==== */
 #prijzen {
   position: relative;
