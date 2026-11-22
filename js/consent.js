@@ -5,7 +5,9 @@
   const CONSENT_VERSION = 1;
   const CONSENT_LIFETIME = 180 * 24 * 60 * 60 * 1000;
   const GTM_ID = "GTM-5H84FHRH";
+  const METRICOOL_HASH = "2088ac3d0b27d3644288de766611cf34";
   let gtmLoaded = false;
+  let metricoolLoaded = false;
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
@@ -45,6 +47,22 @@
     document.head.appendChild(script);
   };
 
+  const loadMetricool = () => {
+    if (metricoolLoaded || document.querySelector("script[data-metricool]")) return;
+    metricoolLoaded = true;
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://tracker.metricool.com/resources/be.js";
+    script.dataset.metricool = "";
+    script.onload = () => {
+      if (window.beTracker && typeof window.beTracker.t === "function") {
+        window.beTracker.t({ hash: METRICOOL_HASH });
+      }
+    };
+    script.onerror = () => { metricoolLoaded = false; script.remove(); };
+    document.head.appendChild(script);
+  };
+
   const updateMarketingEmbeds = enabled => {
     document.querySelectorAll("iframe[data-consent-src]").forEach(frame => {
       const placeholder = frame.nextElementSibling;
@@ -70,6 +88,12 @@
       marketing_consent: marketing
     });
     if (analytics || marketing) loadGTM();
+    if (analytics) loadMetricool();
+    else if (metricoolLoaded) {
+      // Remove an already loaded tracker when analytics consent is withdrawn.
+      window.location.reload();
+      return;
+    }
     if (document.readyState !== "loading") updateMarketingEmbeds(marketing);
   };
 
